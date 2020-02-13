@@ -1,0 +1,14 @@
+.#{$project-prefix}-header__menu {
+  left: 50%;
+  transform: translateX(-50%);
+  will-change: left, transform;
+
+  &-burger {
+    display: none;
+  }
+
+  &--left-with-logo {
+    left: #{$max-logo-width + 45};
+    transform: none;
+  }
+}

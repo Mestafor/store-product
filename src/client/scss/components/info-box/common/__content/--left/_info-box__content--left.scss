@@ -1,0 +1,21 @@
+.#{$project-prefix}-info-box__content {
+  &--left {
+    top: 50%;
+    left: -14px;
+    transform: translate(-100%, -50%) scale(0);
+    transform-origin: right center;
+
+    &:before {
+      top: 50%;
+      right: 0;
+      left: unset;
+      transform: translate(100%, -50%);
+      width: 25px;
+      height: 25px;
+      border-bottom: 14px solid transparent;
+      border-top: 14px solid transparent;
+      border-left: 14px solid var(--color4);
+      border-right: none;
+    }
+  }
+}

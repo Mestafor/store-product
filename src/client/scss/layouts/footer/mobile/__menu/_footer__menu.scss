@@ -1,0 +1,19 @@
+.#{$project-prefix}-footer__menu {
+  position: relative;
+  width: 100%;
+
+  &-list {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 100%;
+    vertical-align: middle;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 15px 0;
+    margin: -15px 0;
+    text-align: center;
+
+    @include webkitScroll;
+
+  }
+}

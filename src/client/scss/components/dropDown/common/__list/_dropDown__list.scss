@@ -1,0 +1,172 @@
+.#{$project-prefix}-dropDown__list {
+    padding: 0;
+    list-style: none;
+    max-height: $listHeight;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--accent-color);
+        border-radius: var(--border-radius-default);
+    }
+
+    &-wrapper {
+        position: absolute;
+        top: 100%;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top;
+        transition: transform .2s ease-in-out .2s, opacity .2s ease-in-out;
+        width: $liWidth;
+        background-color: var(--color4);
+        // box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.10);
+        box-shadow: 0 15px 25px 0 rgba(0, 0, 0, .2);
+        border-radius: var(--border-radius-default);
+        overflow: hidden;
+        z-index: 2;
+        pointer-events: none;
+
+        &--right {
+            right: 0;
+        }
+
+        &--left {
+            left: 0;
+        }
+
+        &--aside {
+
+            &-left,
+            &-right {
+                top: 50%;
+                background-color: transparent;
+                box-shadow: none;
+
+                .#{$project-prefix}-dropDown__list {
+                    display: flex;
+                    align-items: center;
+                    // flex-wrap: wrap;
+                    li {
+                        padding: 10px;
+
+                        @media(max-width: $tablet - 1px) {
+                            padding: 7px;
+                        }
+
+                        &:before {
+                            content: none;
+                        }
+
+                        & > a {
+                            padding: 0;
+                            height: unset;
+                        }
+
+                        &:not(:first-child) {
+
+                            & > a {
+                                padding-left: 0 !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-left {
+                left: 100%;
+                transform: translateY(-50%) scale(0, 1);
+                transform-origin: left;
+
+                li {
+                    &:first-child {
+                        padding-left: 20px;
+
+                        @media(max-width: $tablet - 1px) {
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                left: 0;
+                transform: translateY(-50%) translateX(-100%) scale(0, 1);
+                transform-origin: right;
+
+                li {
+                    &:last-child {
+                        padding-right: 20px;
+
+                        @media(max-width: $tablet - 1px) {
+                            padding-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.--cloned {
+            position: fixed;
+            animation: open-dropDown .2s ease-out forwards;
+        }
+    }
+
+    > li {
+        position: relative;
+        padding: 0;
+        margin: 0;
+
+        @media(min-width: $desktop) {
+            opacity: 0;
+            transition: transform .2s ease-out, opacity .2s ease-out;
+            transform: translateX(-25px);
+
+            .#{$project-prefix}dropDown__list-wrapper--aside-right & {
+                transform: translateX(25px);
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color8);
+            transition: opacity .4s ease-out;
+            opacity: 0;
+            z-index: -1;
+            transform: translateZ(0);
+        }
+
+        &:hover {
+            &:before {
+                opacity: .32;
+            }
+        }
+
+        a {
+            display: block;
+            align-items: center;
+            font-size: pxToRem(13px);
+            padding: 12px 21px;
+            font-weight: 500;
+            color: var(--main-color);
+            letter-spacing: 0;
+            line-height: $liHeight - 24;
+            height: $liHeight;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: var(--border-radius-default);
+    border: 1px solid var(--color2);
+    padding: 0;
+
+    &--active {
+        color: var(--accent-color);
+    }
+
+    &__header {
+        padding: 18px 20px 16px;
+
+        &--pad {
+            &-1 {
+                @media(max-width: $desktop - 1px) {
+                    padding: 20px;
+                }
+
+                @media(min-width: $desktop) {
+                    padding: 36px 40px 50px;
+                }
+            }
+
+            &-2 {
+                @media(min-width: $desktop) {
+                    padding: 23px 34px 23px 40px;
+                }
+            }
+        }
+    }
+
+    &__body {
+        border-top: 1px solid var(--color2);
+        padding: 0;
+
+        @media(max-width: $desktop - 1px) {
+            padding: 0 20px;
+        }
+    }
+
+    &__dolar {
+        &-mark {
+            display: inline-block;
+            font-size: pxToRem(10px);
+            vertical-align: top;
+            font-weight: bold;
+            margin-top: 7px;
+            line-height: 1;
+        }
+
+        &-digit {
+            font-size: pxToRem(34px);
+            line-height: 1;
+        }
+
+        &-month {
+            font-size: pxToRem(13px);
+        }
+    }
+
+    &__option {
+        position: relative;
+        padding: 10px 0;
+        min-height: 50px;
+
+        @media(min-width: $desktop) {
+            padding: 12px 20px;
+        }
+
+        &--pad {
+            &-1 {
+                padding: 10px 0;
+
+                @media(min-width: $desktop) {
+                    padding: 12px 40px;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--color2);
+        }
+
+        &-text {
+            /*padding-right: 15px;*/
+            @media(min-width: $desktop) {
+                opacity: 0;
+                flex: 0 0 auto !important;
+                width: 228px; // magic number :) look on 'price-grid'. First element has 269px width and content has 228px
+            }
+
+            &--show-text {
+                opacity: 1;
+            }
+        }
+
+        &-status {
+            @media(min-width: $desktop) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &--show-text {
+                position: static;
+                transform: unset;
+            }
+
+            svg {
+                display: block;
+            }
+        }
+    }
+}

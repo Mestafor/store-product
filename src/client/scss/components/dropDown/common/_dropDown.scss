@@ -1,0 +1,154 @@
+$liHeight: 40px;
+$listHeight: $liHeight * 4;
+$liWidth: unset;
+
+.#{$project-prefix}-dropDown {
+    $self: &;
+
+    position: relative;
+
+    &--focused,
+    &--hovered,
+    &:hover:not(.#{$project-prefix}dropDown--js-click) {
+        #{$self} {
+            &__title {
+                color: var(--accent-color);
+            }
+
+            &__list {
+                &-wrapper {
+                    transform: scale(1);
+                    opacity: 1;
+                    transition: transform 0s ease-in-out, opacity .2s ease-in-out;
+                    pointer-events: auto;
+
+                    @media(pointer: coarse) {
+                        transition: transform 0s ease-in-out .1s, opacity .2s ease-in-out .1s;
+                    }
+
+                    .#{$project-prefix}carousel__items & {
+                        @media(max-width: $desktop - 1px) {
+                            transform: scale(1, 0);
+                        }
+                    }
+
+                    &--aside {
+
+                        &-left {
+                            transform: translateY(-50%) scale(1) !important;
+                        }
+
+                        &-right {
+                            transform: translateY(-50%) translateX(-100%) scale(1) !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        #{$self} {
+
+            @media(max-width: $desktop - 1px) {
+                &__icon:not(.--no-rotate) {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            @media(min-width: $desktop) {
+                &__list {
+                    > li {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+
+    &:not([class*=#{$project-prefix}-dropDown--hover]):hover:not(.#{$project-prefix}dropDown--js-click) {
+        #{$self} {
+            &__icon {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+
+    &__show-on-focused {
+        display: none;
+    }
+
+    &--focused {
+        #{$self} {
+            &__show-on-focused {
+                display: block;
+            }
+
+            &__hide-on-focused {
+                display: none;
+            }
+        }
+    }
+
+    &--hover2 {
+        #{$self} {
+            &__icon {
+                @media(max-width: $desktop - 1px) {
+                }
+
+                @media(min-width: $desktop) {
+                    margin-left: -24px;
+                    opacity: 0;
+                    transform: translateX(10px);
+                    transition: transform .2s ease-out, opacity .2s ease-out;
+                }
+            }
+
+            &__list {
+                margin: 0;
+            }
+        }
+
+        &:hover:not(.#{$project-prefix}dropDown--js-click) {
+            #{$self} {
+
+                @media(max-width: $desktop - 1px) {
+                    &__icon:not(.--no-rotate) {
+                        transform: rotate(-180deg);
+                    }
+                }
+
+                @media(min-width: $desktop) {
+                    &__title-text {
+                        transform: translateX(-24px);
+                    }
+
+                    &__icon {
+                        opacity: 1;
+                        transform: translateX(3px);
+                    }
+
+                    &__list {
+                        > li {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes open-dropDown {
+    from {
+        transform: scale(1, 0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@import './__icon/dropDown__icon';
+@import './__title/dropDown__title';
+@import './__list/dropDown__list';

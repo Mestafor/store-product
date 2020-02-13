@@ -1,0 +1,26 @@
+.return-to-product {
+
+  @media(max-width: $tablet - 1px) {
+    display: block;
+    margin-top: 21px;
+  }
+
+  @media(min-width: $tablet) {
+    display: inline-block;
+    margin-left: 30px;
+  }
+
+}
+
+.registration-confirmed-box {
+  @media(max-width: $tablet - 1px) {
+    max-width: 69.333%;
+    min-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media(min-width: $tablet) {
+    max-width: 420px;
+  }
+}

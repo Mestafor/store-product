@@ -1,0 +1,30 @@
+.#{$project-prefix}-carousel__items {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 0 -15px;
+  padding: 0 15px 15px;
+  margin-bottom: -15px;
+
+  @include webkitScroll;
+
+  &:after {
+    content: '';
+    flex: 0 0 auto;
+    display: block;
+    width: 20px;
+  }
+
+  .#{$project-prefix}-article {
+    width: 100%;
+    flex: 0 0 auto;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    &__thumb {
+      padding-bottom: 59%;
+    }
+  }
+}

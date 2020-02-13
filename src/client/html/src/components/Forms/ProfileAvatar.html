@@ -1,0 +1,39 @@
+            <!-- Profile Avatar Form -->
+            <form class="tumli-form" action="//profile-avatar" data-testing="test_loading">
+              <!-- 
+                  data-testing="test_loading"
+                  data-testing="test_inputs_errors"
+                  data-testing="test_500_error" 
+                -->
+              <!-- Title -->
+              <h2 class="h3 flex flex--between flex--align-center">
+                <span>Avatar</span>
+                <span class="tumli-form__success-text text-style-7 success-color">Saved</span>
+              </h2>
+              <!-- /Title -->
+
+              <div class="text-center clear-inline-whitespace error">
+                <input type="file" id="change-avatar" name="avatar" hidden>
+                <label for="change-avatar" class="inline-block cursor-pointer">
+                  <img class="user-settings-avatar block block--center"
+                    src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pixelstalk.net%2Fwp-content%2Fuploads%2F2016%2F04%2FFunny-Cat-Wallpapers-Black.jpg"
+                    alt="">
+                </label>
+
+                <div class="mb-30"></div>
+
+                <label for="change-avatar" class="tumli-btn tumli-btn--outline tumli-btn--big mb-default u-relative">
+                  Change Image
+                </label>
+
+                <div class="u-relative">
+                  <div class="error__hide-on-error note">
+                    Recommended to use JPEG, GIF or PNG, 150х150px, max 1MB
+                  </div>
+                  <div class="error__content error__content--simple-text text-style-5 error-color"></div>
+                </div>
+              </div>
+
+              <button class="display-none" type="submit"></button>
+            </form>
+            <!-- /Profile Avatar Form -->

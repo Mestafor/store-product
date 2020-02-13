@@ -1,0 +1,24 @@
+//***************************************************
+// Show item - animate box with this class on scroll
+//***************************************************
+.#{$project-prefix}product:not(.#{$project-prefix}carousel__item) {
+  position: relative;
+  transform: translateY(25px);
+  opacity: 0;
+  will-change: transform, opacity;
+
+  &:not(.project-counter) {
+    opacity: 1;
+    transition: transform .4s ease-out, opacity .4s ease-out, box-shadow .4s ease-in-out;
+
+    &:nth-child(2) {
+      transition: transform 0.6s ease-out, opacity .6s ease-out, box-shadow .4s ease-in-out;
+    }
+
+  }
+
+  &.is-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

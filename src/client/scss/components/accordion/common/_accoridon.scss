@@ -1,0 +1,39 @@
+/*
+* Common
+*/
+
+.accordion {
+  $self: &;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--color2);
+  }
+
+  // Opened accordion
+  input:checked~ {
+    #{$self} {
+      &__title-wrapper, // Якщо title вложений в іншу структуру, то на блок який йде після input дати цей клас
+      &__title {
+
+        #{$self} {
+          &__icon {
+            transform: translate(-100%, -50%) rotate(180deg);
+
+            &--relative {
+            transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      &__content {
+        display: block;
+      }
+
+    }
+  }
+}
+
+@import './__title/accordion__title';
+@import './__icon/accordion__icon';
+@import './__content/accordion__content';

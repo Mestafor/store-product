@@ -1,0 +1,31 @@
+@mixin webkitScroll() {
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 0px solid;
+        background-color: transparent;
+    }
+}
+
+@mixin onlyMouseDevice() {
+    @media(pointer: fine) {
+        @content;
+    }
+}
+
+@mixin onlyTouchDevice() {
+    @media(pointer: coarse) {
+        @content;
+    }
+}

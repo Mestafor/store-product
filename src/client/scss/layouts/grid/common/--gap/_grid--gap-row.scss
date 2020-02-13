@@ -1,0 +1,10 @@
+
+@each $key, $value in $grid-gaps {
+    .grid--gap-row-#{$key} {
+        grid-row-gap: #{$value};
+
+        @include setContentToMedia {
+            grid-row-gap: #{$value};
+        }
+    }
+}

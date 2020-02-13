@@ -1,0 +1,24 @@
+/*
+* Desktop style
+* Author - Alex Miagotin
+* Version: unknown
+*/
+
+/*
+* Variables
+*/
+@import './scss-functionality';
+
+/*
+* Layout
+*/
+@import './layouts/grid/desktop/grid';
+@import './layouts/header/desktop/header';
+
+/*
+* Components
+*/
+@import './components/logo/desktop/logo';
+@import './components/comments/desktop/comments';
+
+@import './components/badge/desktop/badge';

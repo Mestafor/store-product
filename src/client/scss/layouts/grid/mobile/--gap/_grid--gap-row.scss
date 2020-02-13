@@ -1,0 +1,25 @@
+// .grid--gap-row-mobile-xs {
+//   grid-row-gap: $grid-gap-xs;
+// }
+
+// .grid--gap-row-mobile-sm {
+//   grid-row-gap: $grid-gap-sm;
+// }
+
+// .grid--gap-row-mobile-default {
+//   grid-row-gap: $grid-gap-default;
+// }
+
+// .grid--gap-row-mobile-l {
+//   grid-row-gap: $grid-gap-l;
+// }
+
+// .grid--gap-row-mobile-xl {
+//   grid-row-gap: $grid-gap-xl;
+// }
+
+@each $key, $value in $grid-gaps {
+  .grid--gap-row-mobile-#{$key} {
+    grid-row-gap: #{$value};
+  }
+}

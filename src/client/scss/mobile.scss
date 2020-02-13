@@ -1,0 +1,24 @@
+/*
+* Mobile style
+* Author - Alex Miagotin
+* Version: unknown
+*/
+
+/*
+* Variables
+*/
+@import './scss-functionality';
+
+/*
+* Layout
+*/
+@import './layouts/footer/mobile/footer';
+@import './layouts/grid/mobile/grid';
+@import './layouts/header/mobile/header';
+
+/*
+* Components
+*/
+@import './components/logo/mobile/logo';
+@import './components/carousel/mobile/carousel';
+@import './components/badge/mobile/badge';

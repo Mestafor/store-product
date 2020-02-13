@@ -1,0 +1,97 @@
+/*
+* Common style
+* Author - Alex Miagotin
+* Version: 0.0.1
+*/
+
+$pathToFont: "../fonts/proxima";
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('#{$pathToFont}/ProximaNova-Regular.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('#{$pathToFont}/Proxima-Nova-Bold.otf');
+    font-weight: bold;
+}
+
+/*
+* Variables
+*/
+@import './scss-functionality';
+@import './abstract/css-variables';
+
+
+/*
+* Theme basics
+*/
+@import './base/base';
+
+/*
+* Wp-test
+*/
+@import './wp-test';
+
+/*
+* Layout
+*/
+@import './layouts/box-layout';
+@import './layouts/scroll/scroll';
+
+@import './layouts/footer/common/footer';
+@import './layouts/grid/common/grid';
+@import './layouts/header/common/header';
+
+
+/*
+* Components
+*/
+@import './components/video';
+@import '../ts/Components/StickyAside/style';
+@import './components/tabs/tabs';
+@import './components/accordion/accordion';
+
+// Common component style
+@import './components/logo/common/logo';
+@import './components/comments/common/comments';
+@import './components/more-text/common/more-text';
+@import './components/dropDown/common/dropDown';
+@import './components/info-box/common/info-box';
+
+@import './components/badge/common/badge';
+
+
+/*
+* Helpers
+*/
+@import './abstract/helpres';
+
+/*
+* Animations
+*/
+@import './animations/transitions';
+@import './animations/keyframes';
+
+/*
+* Vendors
+*/
+@import './vendors';
+
+/*
+* From JS/TS folder
+* Need to import near css to prevent blink and wrong rendering
+*/
+@import '../ts/Components/BlogPostCarousel/blogPostCarousel';
+@import '../ts/Components/Select/select';
+
+
+@import '../../../node_modules/tiny-slider/src/tiny-slider';
+@import '../ts/Components/TumliSlider/style';
+
+// Theme
+@import './theme/header/common';
+@import './theme/footer/common';
+@import './theme/product-view/common';
+@import './theme/pages/product/common';

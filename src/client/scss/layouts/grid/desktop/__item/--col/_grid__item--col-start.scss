@@ -1,0 +1,5 @@
+@for $i from 1 through 12 {
+  .grid__item--col-start-desktop-#{$i} {
+    grid-column-start: $i;
+  }
+}

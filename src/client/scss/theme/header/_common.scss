@@ -1,0 +1,141 @@
+$topHeaderHeight: 44px;
+
+.main-header {
+    
+    &__top {
+        height: $topHeaderHeight;
+    }
+
+    &__bottom {
+
+    }
+}
+
+.main-header {
+    li {
+        margin-bottom: 0;
+    }
+}
+
+.top-menu {
+    li {
+        &:not(:last-child) {
+            padding-right: 35px;
+        }
+    }
+
+}
+
+.language-list {
+    margin-right: 80px; // ?
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    
+    a {
+        display: flex;
+        align-items: center;
+        height: $topHeaderHeight;
+    }
+}
+
+// Choose city
+.choose-city {
+    &__text {
+
+    }
+
+    &__content {
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+    }
+}
+
+.select-style-1 {
+    background-color: transparent;
+    border: none;
+    color: var(--second-color);
+}
+
+// MIDDLE HEADER
+$midHeaderHeght: 112px;
+.main-header__mid {
+    height: $midHeaderHeght;
+}
+
+// Logo
+.main-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+        object-fit: contain;
+        object-position: center;
+        max-width: 100%;
+        max-height: 100%;
+        width: unset;
+    }
+}
+
+// Search
+.main-search-wrapper {
+    max-width: 350px;
+}
+
+.main-search {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-input);
+    padding-right: 20px;
+    transition: border-color .2s ease-in-out;
+
+    @media(pointer: fine) {
+        &:hover {
+            border-color: var(--accent-color);
+        }
+    }
+
+    &__input {
+        padding: 10px 5px 10px 25px;
+        border: none;
+        border-radius: var(--border-radius-input);
+    }
+
+    &__submit {
+        background-color: transparent;
+        border: none;
+        transition: color .2s ease-in-out;
+        
+        &:focus {
+            outline: none;
+        }
+        @media(pointer: fine) {
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+    }
+}
+
+.mid-menu {
+    li {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+}
+
+// Bottom
+.main-header__bottom {
+    height: 54px;
+
+    &-links {
+        > div {
+            border-right: 1px solid var(--border-color-2);
+        }
+    }
+}

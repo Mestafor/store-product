@@ -1,0 +1,62 @@
+.#{$project-prefix}-badge {
+  position: absolute;
+  border-radius: 50%;
+  color: var(--white-color);
+  background-color: var(--accent-color); 
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+  // border: 2px solid;
+
+  &--top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &--bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+  }
+
+  &--top-right {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  &--bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+  }
+
+  &__text.small,
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: -1px;
+  }
+
+  &--style {
+    &-2 {
+      display: inline-flex;
+      align-items: center;
+      width: auto;
+      height: auto;
+      border-radius: 5px;
+      padding: 0px 13px;
+      min-height: 29px;
+      background-color: var(--warning-color);
+      transform: none;
+      color: var(--white-color);
+      font-size: pxToRem(14px);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+}

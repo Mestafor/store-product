@@ -1,0 +1,5 @@
+@for $i from 1 through 12 {
+  .grid__item--row-start-mobile-#{$i} {
+    grid-row-start: $i;
+  }
+}

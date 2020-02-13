@@ -1,0 +1,194 @@
+<!-- Purchase -->
+<div class="tumli-sticky-block tumli-sticky-block--fix-after-hide">
+<!-- <div class="tumli-sticky-block"> -->
+
+  <form method="POST" action="//purchase-form" data-action="//purchase-form" data-testing="test_500_error"
+    class="tumli-purchase">
+    <!-- 
+      data-testing="test_loading"
+      data-testing="test_inputs_errors"
+      data-testing="test_500_error" 
+    -->
+
+    <div class="error__item error__item--hide-on-error box-model-1">
+
+      <div
+        class="flex flex--wrap box-model-default-l box-model-default-r tumli-purchase__header purchase-form__disable-on-promo-code">
+        <div class="flex--11-auto pr-default">
+          <div class="text-style-9 tumli-purchase__total-title">
+            Total:
+          </div>
+        </div>
+
+        <div class="flex--00-auto flex ml-auto flex--wrap flex--justify-end max-full-width">
+          //= ./CartPurchaseDiscountPrice.html
+
+          <div class="flex--00-auto text-style-2 pl-sm flex" data-price="">
+            <span class="block pr-xs" data-currency>$</span>
+
+            <span class="total-purchase-price pl-xs pr-xs" data-discount-amount-decimal>11</span>
+            .
+            <span class="total-purchase-price-cent pl-xs" data-discount-amount-cent>00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-model-default-l box-model-default-r purchase-form__disable-on-promo-code tumli-sticky-block__hide-on-fixed">
+      <!-- <div class="box-model-default-l box-model-default-r purchase-form__disable-on-promo-code"> -->
+        //= ./CartPurchaseVAT.html
+      </div>
+
+      <div class="box-model-default-l box-model-default-r tumli-sticky-block__hide-on-fixed">
+      <!-- <div class="box-model-default-l box-model-default-r"> -->
+        //= ./CartPurchasePromoCode.html
+      </div>
+
+      <div class="box-model-default-l box-model-default-r purchase-form__disable-on-promo-code tumli-sticky-block__hide-on-fixed tumli-purchase__hide-on-credits">
+      <!-- <div class="box-model-default-l box-model-default-r purchase-form__disable-on-promo-code"> -->
+        //= ./CartPurchaseBalance.html
+      </div>
+
+      <div class="purchase-form__disable-on-promo-code tumli-purchase__show-on-credits">
+        //= ./CartPurchaseCredits.html
+      </div>
+
+      <div class="purchase-form__disable-on-promo-code tumli-purchase__hide-on-credits">
+        //= ./CartPurchaseCreditCard.html
+      </div>
+
+      <div class="purchase-form__disable-on-promo-code mt--1 tumli-purchase__hide-on-credits">
+        //= ./CartPurchasePayPal.html
+      </div>
+
+      <div class="purchase-form__disable-on-promo-code mt--1 tumli-purchase__hide-on-credits">
+        //= ./CartPurchaseSkrill.html
+      </div>
+
+      <!-- = ./CartPurchasePromoCodeInput.html -->
+
+
+      <div class="anim-box purchase-form__disable-on-promo-code">
+        <button class="full-width tumli-btn tumli-btn--no-hover form-submit u-none-br-tl u-none-br-tr" type="submit">
+          <span class="form-submit__text anim-box__text anim-box__text--1 pl-sm pr-sm">
+            Finish Purchase
+          </span>
+          <span class="anim-box__icon anim-box__icon--1 absolute">
+            <span data-total-amount>$11.00</span>
+          </span>
+
+          <span class="form-submit__sending"></span>
+
+          <span class="form-submit__success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+            </svg>
+          </span>
+
+          <span class="form-submit__error">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+              height="20px" viewBox="0 0 20 20" version="1.1">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-993.000000, -682.000000)" fill="currentColor" fill-rule="nonzero">
+                  <path
+                    d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+          </span>
+
+        </button>
+      </div>
+    </div>
+
+    <!-- ERROR -->
+    <div class="error__item error__item--show-on-error">
+
+      <div class="box-model-1">
+        <div class="text-center pt-sxl pb-sxl pl-default pr-default box-size-4 mr-auto ml-auto">
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57px" height="57px"
+            viewBox="0 0 57 57" version="1.1">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g transform="translate(-157.000000, -663.000000)">
+                <g transform="translate(18.000000, 632.000000)">
+                  <g transform="translate(139.000000, 31.000000)">
+                    <path
+                      d="M7.56364091,26.8984943 C7.00108977,26.8984943 6.66556705,26.5629716 6.66556705,26.0007443 C6.66556705,25.4378693 7.00108977,25.1023466 7.56364091,25.1023466 L19.155692,25.1023466 C19.718567,25.1023466 20.0540898,25.4378693 20.0540898,26.0007443 C20.0540898,26.5629716 19.718567,26.8984943 19.155692,26.8984943 L7.56364091,26.8984943 Z"
+                      fill="#DF0F0F" />
+                    <g transform="translate(0.000000, 0.072545)">
+                      <g />
+                      <path
+                        d="M4.52045625,2.04785455 C2.99279148,2.04785455 1.79611534,3.24453068 1.79611534,4.77219545 L1.79611534,10.539883 L54.9181722,10.539883 L54.9181722,4.77219545 C54.9181722,3.3209625 53.6450642,2.04785455 52.1938313,2.04785455 L4.52045625,2.04785455 Z M1.79611534,32.3038432 C1.79611534,33.7550761 3.0692233,35.0281841 4.52045625,35.0281841 L20.4752744,35.0281841 L20.5653085,34.5870818 C22.2892347,26.1105989 29.8627858,19.9584852 38.5727744,19.9584852 C44.9211494,19.9584852 50.7050301,23.165383 54.0447119,28.5369852 L55.0632631,30.1757352 L55.0632631,12.3360307 L1.79611534,12.3360307 L1.79611534,32.3038432 Z M22.5389335,34.323133 C22.2403313,35.2270364 22.0826097,36.2818602 22.0826097,37.3752239 L22.0826097,38.2447977 C22.0826097,47.3372693 29.4803028,54.7349625 38.5727744,54.7349625 C47.6655699,54.7349625 55.0632631,47.3372693 55.0632631,38.2447977 L55.0632631,36.9014114 L55.0574335,36.8625477 C54.911371,35.8427011 54.7614222,34.7946784 54.462496,33.7466557 C52.4668483,26.6864284 45.9332233,21.754633 38.5727744,21.754633 C30.9891835,21.754633 24.3988824,26.9222011 22.5389335,34.323133 Z M38.5727744,56.6762011 C28.489604,56.6762011 20.2864619,48.4730591 20.2864619,38.3895648 L20.2864619,36.9690989 L4.52045625,36.9690989 C2.07010398,36.9690989 -3.23863636e-05,34.8992864 -3.23863636e-05,32.4486102 L-3.23863636e-05,4.77219545 C-3.23863636e-05,2.23731477 1.98557557,0.251382955 4.52045625,0.251382955 L52.3385983,0.251382955 C54.8738028,0.251382955 56.8594108,2.23731477 56.8594108,4.77219545 L56.8594108,32.4486102 C56.8594108,33.1125307 56.7256551,33.7453602 56.4830813,34.230508 L56.3953142,34.4057182 L56.4377403,34.5967977 C56.7175585,35.8553318 56.8594108,37.1313545 56.8594108,38.3895648 C56.8594108,48.4730591 48.6562688,56.6762011 38.5727744,56.6762011 Z"
+                        fill="#DF0F0F" />
+                    </g>
+                    <path
+                      d="M34.6880301,46.6244455 C34.4273199,46.6244455 34.1747063,46.5149795 33.9761778,46.3164511 L27.8227687,40.163042 C27.6239165,39.9645136 27.5147744,39.7060705 27.5147744,39.4349966 C27.5147744,39.1639227 27.6239165,38.9051557 27.8227687,38.7066273 C28.0209733,38.507775 28.2797403,38.398633 28.5508142,38.398633 C28.8218881,38.398633 29.0806551,38.507775 29.2788597,38.7066273 L34.7207403,44.1148261 L47.9340528,30.9342239 C48.1202744,30.7356955 48.3761267,30.6259057 48.6423426,30.6259057 C48.904996,30.6259057 49.1498369,30.7334284 49.3137119,30.9206216 C49.7344108,31.3419682 49.7344108,31.9819227 49.3260188,32.3903148 L35.3998824,46.3164511 C35.201354,46.5149795 34.9487403,46.6244455 34.6880301,46.6244455"
+                      fill="#DF0F0F" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <div class="h2 block--center">
+            Payment Was Wrong
+          </div>
+
+          <p class="block--center mb-0">
+            Your Payment was declined from
+            side of your bank. Change your Credit Card and try it again
+          </p>
+
+        </div>
+
+        <label class="full-width tumli-btn tumli-btn--no-hover u-none-br-tl u-none-br-tr tumli-btn--error">
+          <span class="form-submit__text text-transform-none">
+            Change payment details
+          </span>
+
+          <input type="checkbox" hidden>
+        </label>
+      </div>
+
+      <div class="text-center note pt-default pl-sm pr-sm box-size-4 ml-auto mr-auto">
+        <!-- If you have some questions about payment, please check our <a href="#">FAQ</a> -->
+        <a href="https://tumli.net/contact">
+          Problem with processing of your payment?
+        </a>
+      </div>
+
+    </div>
+    <!-- /ERROR -->
+
+  </form>
+
+  <script>
+    if (!window.tumli) {
+      window.tumli = {};
+    }
+
+    if (!window.tumli.purchase) {
+      window.tumli.purchase = {};
+    }
+
+    window.tumli.purchaseInfo = {
+      amount: 1099,
+      currency: '$',
+      discount: 0,
+      promoCode: '',
+      promoCodeDiscount: 0,
+      balance: 600,
+      products: ["0", "1", "2", "3", "4", "5", "6"], // product id's
+      latterProducts: [],
+    };
+
+    window.tumli.purchaseForm = {
+      endpoint: 'test'
+    }
+  </script>
+
+
+</div>
+<!-- /Purchase -->

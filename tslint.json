@@ -1,0 +1,15 @@
+{
+  "defaultSeverity": "error",
+  "extends": "./node_modules/gts/tslint.json",
+  "rules": {
+    "interface-name": [false, "always-prefix"],
+    "no-any": false,
+    "no-default-export": false,
+    "no-unused-expression": false
+  },
+  "linterOptions": {
+    "exclude": [
+          "./src/client/ts/polyfills"
+      ]
+  }
+}

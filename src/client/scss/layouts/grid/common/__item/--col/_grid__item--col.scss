@@ -1,0 +1,5 @@
+@for $i from 2 through 12 {
+  .grid__item--col-#{$i} {
+    grid-column: span $i;
+  }
+}

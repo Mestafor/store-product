@@ -1,0 +1,11 @@
+.#{$project-prefix}-logo {
+  &__img,
+  img {
+    display: block;
+    max-width: 100%;
+    object-position: left;
+    object-fit: contain;
+    flex: 0 0 auto;
+    border-radius: 0;
+  }
+}

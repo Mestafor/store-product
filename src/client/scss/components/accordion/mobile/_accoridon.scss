@@ -1,0 +1,13 @@
+/*
+* Mobile
+*/
+
+.accordion {
+  @media(max-width: $tablet - 1px) {
+    padding: 10px 0 10px 25px;
+  }
+}
+
+@import './__title/accordion__title';
+@import './__icon/accordion__icon';
+@import './__content/accordion__content';

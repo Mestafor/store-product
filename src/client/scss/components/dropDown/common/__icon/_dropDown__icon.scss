@@ -1,0 +1,11 @@
+.#{$project-prefix}-dropDown__icon {
+  position: relative;
+  transition: transform .4s ease-out;
+  vertical-align: middle;
+
+  @media(max-width: $tablet - 1px) {
+    .#{$project-prefix}popular-post__header & {
+      display: none;
+    }
+  }
+}

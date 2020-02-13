@@ -1,0 +1,11 @@
+.#{$project-prefix}-h-scroll {
+  @media(pointers: coarse) {
+
+    &__content {
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      @include webkitScroll();
+    }
+  }
+}

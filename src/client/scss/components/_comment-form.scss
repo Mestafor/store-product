@@ -1,0 +1,65 @@
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  >div {
+    flex: 0 0 auto;
+    min-width: 0;
+
+    &:not(:last-of-type) {
+
+      @media(max-width: $desktop - 1px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: $desktop) {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 30px;
+      }
+    }
+
+    &:last-of-type {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media(min-width: $desktop) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  textarea,
+  input {
+    display: block;
+  }
+
+
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    width: 100%;
+  }
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 0;
+
+  @media(max-width: $desktop - 1px) {
+    input {
+      width: 100%;
+    }
+  }
+}
+
+/*
+* Comment Form
+*/
+.#{$project-prefix}-comment-form {
+
+  &__header {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,20 @@
+
+.#{$project-prefix}-info-box__content {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    padding: 7px 10px;
+    background-color: var(--color1);
+    transform: translateY(-100%) scale(0);
+    white-space: nowrap;
+    transition: transform .2s ease;
+    transform-origin: bottom left;
+    z-index: 2;
+  }
+
+  @import './--style-2/info-box__content--style-2';
+  @import './--style-3/info-box__content--style-3';
+  @import './--style-4/info-box__content--style-4';
+
+  @import './--mobile/info-box__content--mobile';
+  @import './--left/info-box__content--left';

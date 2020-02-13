@@ -1,0 +1,10 @@
+.#{$project-prefix}-carousel__items > .#{$project-prefix}product,
+.#{$project-prefix}-carousel__item {
+  width: calc(100% - #{$container-mobile-gap});
+  flex: 0 0 auto;
+  transform: none;
+
+  &:not(:last-of-type) {
+    margin-right: $container-mobile-gap;
+  }
+}

@@ -1,0 +1,63 @@
+$project-prefix: project;
+$html-font-size: 13px;
+
+// Screen size
+$desktop: 992px;
+$tablet: 768px;
+$mobile: 500px;
+
+$media-map: ( 
+    xs: '(max-width: #{$tablet - 1px})', //
+    sm: '(min-width: #{$tablet}) and (max-width: #{$desktop - 1px})', //
+    md: '(min-width: #{$desktop})' //
+);
+
+// Width
+$section-width: 1600px;
+$container-width: 1290px + 60px;
+
+$content-width: $container-width / 1.24;
+$content-width-small: $container-width / 1.56;
+$content-w-xs: $container-width / 2.11;
+
+$container-gap: 30px;
+$container-mobile-gap: 15px;
+
+$desktop-gap: 30px;
+$mobile-gap: 15px;
+
+// Border
+$borderRadius1: 8px;
+
+// Inputs
+$inputHeight: 46px;
+$inputSmallHeight: 44px;
+
+
+/*
+* Заголовки
+* Налаштування для заголовків
+*/
+// Headings
+$heading-margin-bottom: 13px;
+// fontSize line-height font-weight margin-bottom margin-top
+$headingFontSize: (
+    h1: (34px 45px bold 13px 13px), // 
+    h2: (28px 30px bold 16px 28px), //
+    h3: (20px 24px bold 18px 18px), //
+    h4: (13px 18px 600 19px 19px), //
+    h5: (18px 23px bold 17px 17px), //
+    h6: (13px 18px 600 19px 19px) //
+);
+
+// fontSize line-height font-weight margin-bottom margin-top
+$headingFontSizeMobile: (
+    h1: (24px 30px bold 16px 28px), //
+    h2: (18px 23px bold 16px 28px), //
+    h3: (16px 23px bold 18px 18px), //
+    h4: (13px 18px 600 19px 19px), //
+    h5: (16px 23px bold 17px 17px), //
+    h6: (13px 18px 600 19px 19px) //
+);
+
+$max-logo-width: 65px;

@@ -1,0 +1,93 @@
+@mixin fontSizePxToRem($size) {
+    font-size: ($size / $html-font-size) * 1rem;
+}
+
+@mixin note-text($font-size: 13px, $color: var(--main-color--opacity)) {
+    font-size: pxToRem($font-size);
+    line-height: 1.95;
+    color: $color;
+    letter-spacing: 0.01px;
+    // opacity: .3;
+    font-weight: normal;
+
+    .h6 {
+        margin-bottom: 1em;
+    }
+
+    a {
+        line-height: inherit;
+    }
+}
+
+@mixin button--disabled() {
+    color: var(--color3) !important;
+    background-color: var(--color2) !important;
+    border-color: var(--color2) !important;
+    cursor: not-allowed !important;
+}
+
+// Heading style
+@mixin headerStyle($value) {
+    font-size: pxToRem(nth($value, 1));
+    line-height: nth($value, 2) / nth($value, 1);
+    font-weight: nth($value, 3);
+    margin: 0 0 pxToEm(nth($value, 1), nth($value, 4)) 0;
+    color: var(--second-color);
+
+    &--remove-line-height {
+        margin-top: calc(-1em * #{(nth($value, 2) / nth($value, 1)) - 1} + 1px) !important;
+        margin-bottom: calc(-1em * #{(nth($value, 2) / nth($value, 1)) - 1} + 1px) !important;
+    }
+
+    a {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        font-stretch: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+
+        @include link-hover {
+            color: var(--accent-color);
+        }
+    }
+}
+
+@mixin link-hover() {
+    .--hovered & {
+        &.js-hover-box__item {
+            @content;
+
+            &--accent-color {
+                color: var(--accent-color);
+            }
+        }
+    }
+
+    &:hover {
+        @content;
+    }
+}
+
+// Abstract text style
+@mixin style-1($weight: 600, $color: var(--color3)) {
+    font-size: pxToRem(13px);
+    font-weight: $weight;
+    font-style: normal;
+    font-stretch: normal;
+    // line-height: 1.69;
+    letter-spacing: normal;
+    text-decoration: none;
+    color: $color;
+}
+
+// Abstract link style
+@mixin link-style-1($weight: 600, $color: var(--color3), $hover-color: var(--accent-color)) {
+    @include style-1($weight, $color);
+
+    @include link-hover {
+        color: $hover-color;
+    }
+}

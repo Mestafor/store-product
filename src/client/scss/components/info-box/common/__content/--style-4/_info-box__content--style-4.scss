@@ -1,0 +1,32 @@
+
+.#{$project-prefix}-info-box__content {
+    &--style {
+      &-4 {
+        background-color: var(--white-color);
+        border-radius: var(--border-radius-default);
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+        right: unset;
+        left: -20px;
+        top: 50%;
+        transform: translate(-100%, -50%) scale(0);
+        width: 189px;
+        white-space: normal;
+        padding: 14px 20px;
+        text-align: left;
+        transform-origin: right center;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(100%, -50%);
+          width: 25px;
+          height: 25px;
+          border-bottom: 14px solid transparent;
+          border-top: 14px solid transparent;
+          border-left: 14px solid var(--white-color);
+        }
+      }
+    }
+  }

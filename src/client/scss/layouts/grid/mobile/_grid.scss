@@ -1,0 +1,35 @@
+$grid-gap-xs: 7px;
+$grid-gap-sm: 20px;
+$grid-gap-default: 30px;
+$grid-gap-l: 45px;
+$grid-gap-xl: 60px;
+
+$grid-gaps: (
+  xs: 7px,
+  sm: 15px,
+  default: 30px,
+  l: 45px,
+  xl: 60px,
+  none: 0,
+  custom-1: 20px
+);
+
+@media(max-width: $tablet - 1px) {
+  // Mod
+  @import './--col/grid--col';
+  @import './--gap/grid--gap-col';
+  @import './--gap/grid--gap-row';
+
+  // Elems
+  @import './__item/grid__item';
+}
+
+@media(max-width: 450px) {
+
+  // Span
+  @for $i from 1 through 12 {
+    .grid__item--col-#{$i}-xs {
+      grid-column: span $i;
+    }
+  }
+}

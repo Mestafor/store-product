@@ -1,0 +1,19 @@
+/*
+* Comments
+*/
+
+.#{$project-prefix}-comments {
+
+  &__header {}
+
+}
+
+@import './__list/comments__list';
+@import './__item-avatar/comments__item-avatar';
+@import './__item-comment/comments__item-comment';
+@import './__item-content/comments__item-content';
+@import './__item-edit/comments__item-edit';
+
+.comment-edit-link {
+  margin-right: 7px;
+}

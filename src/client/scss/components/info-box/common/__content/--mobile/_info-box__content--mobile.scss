@@ -1,0 +1,12 @@
+.#{$project-prefix}-info-box__content {
+  &--mobile {
+    left: 0;
+    right: unset;
+    transform: scale(0);
+    transform-origin: center;
+
+    &:before {
+      content: none;
+    }
+  }
+}

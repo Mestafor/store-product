@@ -1,0 +1,103 @@
+/*
+* Remove taping
+* https://github.com/necolas/normalize.css/issues/23
+*/
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/*
+* Heading
+*/
+
+@media(max-width: $tablet - 1px) {
+  @each $key,
+  $value in $headingFontSizeMobile {
+
+    .#{$key},
+    #{$key} {
+      @include headerStyle($value);
+    }
+  }
+}
+
+@media(min-width: $tablet) {
+
+  @each $key,
+  $value in $headingFontSize {
+
+    .#{$key},
+    #{$key} {
+      @include headerStyle($value);
+    }
+  }
+}
+
+// h5,
+// .h5,
+// h6,
+// .h6 {
+//   color: var(--color3);
+// }
+
+
+/*
+* Paragraph
+*/
+p {
+  margin: 0 0 pxToEm($html-font-size, 14px) 0;
+  transition: 04s ease;
+  transition: color .2s ease;
+  letter-spacing: 0.03px;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.p {
+  &--has-margin {
+    &-top {
+      margin-top: pxToEm($html-font-size, 14px) !important;
+    }
+  }
+}
+
+/*
+* Links
+*/
+a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: color .2s ease;
+  -webkit-tap-highlight-color: transparent;
+
+  @media(pointer: fine) {
+    @for $i from 1 through 6 {
+      transition: color .2s ease-in-out;
+    }
+  
+    &:hover {
+      color: var(--accent-color);
+  
+      @for $i from 1 through 6 {
+        h#{$i}, .h#{$i} {
+          color: inherit;
+        }
+      }
+    }
+  }
+  
+}

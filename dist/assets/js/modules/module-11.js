@@ -1,0 +1,1 @@
+(window.webpackJsonp_name_=window.webpackJsonp_name_||[]).push([[11],{"./src/client/ts/Components/TumliSlider/index.ts":function(n,e,i){"use strict";i.r(e),i.d(e,"TumliSlider",(function(){return t}));var s=i("./node_modules/tiny-slider/src/tiny-slider.js"),t=function(n){Object(s.a)(n)}}}]);

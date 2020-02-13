@@ -1,0 +1,10 @@
+.#{$project-prefix}-more-text__content {
+  // max-height: calc(1.95 * 1em * 3);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-out;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,24 @@
+.#{$project-prefix}-scroll-line-wrapper {
+  background-color: var(--accent-color);
+  border-radius: var(--border-radius-default);
+
+}
+
+.#{$project-prefix}-scroll-line {
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  width: 2px;
+  background-color: var(--accent-color);
+  border-radius: 15px;
+}
+
+.sub-menu__ul,
+.--scroll-inited {
+  @include webkitScroll;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius-default);
+  }
+}

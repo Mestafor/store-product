@@ -1,0 +1,21 @@
+.box-shadow-on-drag-enter {
+  transition: box-shadow .2s ease-in-out;
+}
+
+.collection-drop-item {
+
+  &.--drag-enter {
+
+    &.box-shadow-on-drag-enter,
+    .box-shadow-on-drag-enter {
+      box-shadow: var(--box-shadow-default);
+    }
+  }
+}
+
+.--drag-start {
+  &.#{$project-prefix}product > a {
+    opacity: 1;
+    background-color: var(--color1);
+  }
+}

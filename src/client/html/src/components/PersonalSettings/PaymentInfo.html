@@ -1,0 +1,213 @@
+<!-- Payment info -->
+<section class="tumli-container box-model-out-indent-b">
+
+  <div class="">
+    <label class="block tumli-radiobox">
+
+      <input type="radio" required="" name="user_settings" id="cart-purchase-credit-card" value="">
+
+      <div
+        class="input-box input-box--animate-content u-overflow-hidden box-model-1 input-box__hover-bg-on-unchecked input-box__cursor-pointer-on-unchecked">
+
+        <div class="input-box__content">
+
+          <!-- Title -->
+          <div class="flex flex--between flex--align-center">
+
+            <div class="flex--11-auto">
+
+              <div class="flex flex--wrap  box-model-default">
+                <span class="tumli-radiobox__icon flex--00-auto hide">
+                </span>
+                <span class="flex--11-auto tumli-radiobox__title">
+                  <span class="pl-0 mb-0 h3 h3--remove-line-height flex flex--align-center mr-0">
+                    <span class="flex--11-auto input-box__accent-color-on-checked">
+                      Payment info
+                    </span>
+
+                    <span class="flex--00-auto input-box__hide-on-checked mr--6">
+                      <svg class="block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <polygon points="7.41 8.84 12 13.42 16.59 8.84 18 10.25 12 16.25 6 10.25" fill="currentColor">
+                        </polygon>
+                      </svg>
+                    </span>
+                  </span>
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- /Title -->
+
+          <!-- Content show on checked -->
+          <form autocomplete="off" data-testing="test_inputs_errors" action="//profile-payment-info" method="POST"
+            class="input-box__show-on-checked tumli-form">
+
+            <div class="grid grid--col-desktop-3 box-model-default-l box-model-default-r grid--gap-col-custom-1">
+
+              <!-- Card info -->
+              <div class="grid__item grid__item--row-end-3 box-model-1 box-model-default-l box-model-default-r flex flex--direction-column">
+                //= ./partials/creditCard.html
+              </div>
+              <!-- /Card info -->
+
+              <!-- Country Select -->
+              <div class="grid__item">
+                //= ../Selects/CountrySelect.html
+              </div>
+              <!-- /Country Select -->
+
+              <!-- City -->
+              <div class="grid__item">
+                <label class="block tumli-input error">
+                  <input class="tumli-input__field full-width" type="text" value="" name="city">
+                  <span class="tumli-input__placeholder">City</span>
+                  <div class="error__content">Field is not valid</div>
+                  <div class="error__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                      height="20px" viewBox="0 0 20 20" version="1.1">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-993.000000, -682.000000)" fill="#DF0F0F" fill-rule="nonzero">
+                          <path
+                            d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                          </path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </label>
+              </div>
+              <!-- /City -->
+
+              <!-- Address -->
+              <div class="grid__item">
+                <label class="block tumli-input error">
+                  <input class="tumli-input__field full-width" type="text" value="" name="address">
+                  <span class="tumli-input__placeholder">Address</span>
+                  <div class="error__content">Field is not valid</div>
+                  <div class="error__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                      height="20px" viewBox="0 0 20 20" version="1.1">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-993.000000, -682.000000)" fill="#DF0F0F" fill-rule="nonzero">
+                          <path
+                            d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                          </path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </label>
+              </div>
+              <!-- /Address -->
+
+              <!-- Address2 -->
+              <div class="grid__item">
+                <label class="block tumli-input error">
+                  <input class="tumli-input__field full-width" type="text" value="" name="address2">
+                  <span class="tumli-input__placeholder">Address 2 (optional)</span>
+                  <div class="error__content">Field is not valid</div>
+                  <div class="error__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                      height="20px" viewBox="0 0 20 20" version="1.1">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-993.000000, -682.000000)" fill="#DF0F0F" fill-rule="nonzero">
+                          <path
+                            d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                          </path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </label>
+              </div>
+              <!-- /Address2 -->
+
+              <!-- State/Region - Index-->
+              <div class="grid__item grid grid--col-desktop-2 grid--gap-col-custom-1">
+                <!-- State/Region -->
+                <div class="grid__item">
+                  <label class="block tumli-input error">
+                    <input class="tumli-input__field full-width" type="text" value="" name="state_region">
+                    <span class="tumli-input__placeholder">State/Region</span>
+                    <div class="error__content">Field is not valid</div>
+                    <div class="error__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                        height="20px" viewBox="0 0 20 20" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g transform="translate(-993.000000, -682.000000)" fill="#DF0F0F" fill-rule="nonzero">
+                            <path
+                              d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                            </path>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+                <!-- /State/Region -->
+
+                <!-- Index -->
+                <div class="grid__item">
+                  <label class="block tumli-input error">
+                    <input class="tumli-input__field full-width" type="text" value="" name="index">
+                    <span class="tumli-input__placeholder">Index</span>
+                    <div class="error__content">Field is not valid</div>
+                    <div class="error__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                        height="20px" viewBox="0 0 20 20" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g transform="translate(-993.000000, -682.000000)" fill="#DF0F0F" fill-rule="nonzero">
+                            <path
+                              d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                            </path>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+                <!-- /Index -->
+              </div>
+              <!-- /State/Region - index -->
+
+              <!-- Company -->
+              <div class="grid__item">
+                <label class="block tumli-input error">
+                  <input class="tumli-input__field full-width" type="text" value="" name="company">
+                  <span class="tumli-input__placeholder">Company (optional)</span>
+                  <div class="error__content">Field is not valid</div>
+                  <div class="error__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                      height="20px" viewBox="0 0 20 20" version="1.1">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-993.000000, -682.000000)" fill="#DF0F0F" fill-rule="nonzero">
+                          <path
+                            d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                          </path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </label>
+              </div>
+              <!-- /Company -->
+
+            </div>
+
+            //= ./partials/submitButton.html
+
+          </form>
+          <!-- /Content show on checked -->
+
+        </div>
+
+      </div>
+
+    </label>
+  </div>
+
+</section>
+<!-- /Payment info -->

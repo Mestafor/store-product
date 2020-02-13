@@ -1,0 +1,121 @@
+@import '../../scss-functionality';
+
+/*
+* Text style
+*/
+.page-desc {
+  font-size: pxToRem(18px);
+  line-height: getLineHeight(18, 28);
+}
+
+.lead {
+  @extend .page-desc;
+  font-weight: bold;
+}
+
+.note {
+  @include note-text;
+}
+
+.small {
+  @include note-text(10px, inherit);
+}
+
+.text-style-1 {
+  font-size: pxToRem(14px);
+  color: var(--second-color);
+}
+
+.text-style-2 {
+  font-size: pxToRem(16px);
+  font-weight: bold;
+  line-height: 1.38;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-style-3 {
+  font-size: pxToRem(12px);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.text-style-4 {
+  font-size: pxToRem(14px);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.text-style-5 {
+  font-size: pxToRem(12px);
+  color: #999999;
+}
+
+.text-style-6 {
+  font-size: pxToRem(14px);
+  color: var(--warning-color);
+  font-weight: bold;
+}
+
+.text-style-7 {
+  font-size: pxToRem(30px);
+  font-weight: bold;
+  color: var(--second-color);
+}
+
+.text-style-8 {
+  font-size: pxToRem(14px);
+  color: var(--color13);
+  line-height: 1.43;
+}
+
+.text-style-9 {
+  font-size: pxToRem(12px);
+  color: var(--color14);
+}
+
+.text-style-10 {
+  font-size: pxToRem(16px);
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+.text-style-11 {
+  font-size: pxToRem(13px);
+  color: var(--color14);
+}
+
+.text-style-12 {
+  font-size: pxToRem(15px);
+  color: var(--color14);
+}
+
+.text-style-13 {
+  font-size: pxToRem(14px);
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+.text-style-14 {
+  font-size: pxToRem(30px);
+  font-weight: bold;
+  color: var(--color14);
+}
+
+.text-style-15 {
+  font-size: pxToRem(12px);
+  color: var(--color13);
+  line-height: 1.2;
+}
+
+.text-style-16 {
+  font-size: pxToRem(22px);
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+.text-style-17 {
+  font-size: pxToRem(16px);
+}
+
+.text-style-18 {
+  font-size: pxToRem(40px);
+  font-weight: bold;
+}

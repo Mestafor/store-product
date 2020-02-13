@@ -1,0 +1,92 @@
+/**
+* MENU KEYFRAMES ANIMATIONS
+*/
+
+// Hide block
+@keyframes hide-block {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(.5);
+  }
+}
+
+.animation-hide-block {
+  animation: hide-block .4s ease-in-out forwards;
+}
+
+// MOBILE MENU
+@keyframes show-mobile-menu {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// Show element
+@keyframes bounceInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.animation-bounceInUp {
+  animation: bounceInUp .4s ease-in-out;
+}
+
+@keyframes bounceInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.animation-bounceInDown {
+  animation: bounceInDown .4s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animation-scaleIn {
+  animation: scaleIn .4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animation-fadeIn {
+  animation: scaleIn .2s ease-in-out;
+}

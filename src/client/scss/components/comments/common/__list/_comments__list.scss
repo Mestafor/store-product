@@ -1,0 +1,10 @@
+.#{$project-prefix}-comments__list {
+    list-style: none;
+    padding: 0;
+    margin: 43px 0 0;
+
+    ul.children {
+      list-style: none;
+      padding-left: 65px;
+    }
+  }

@@ -1,0 +1,51 @@
+<div class="tumli-select js-select--month tumli-select--style-1 text-nowrap tumli-purchase__subscribe-select">
+  <div class="tumli-select__title flex flex--align-center flex--justify-between">
+    <div class="tumli-select__title-text flex--11-auto text-style-4 pr-sxl">
+      <!-- Title text -->
+      Month
+      <!-- /Title text -->
+    </div>
+    <div class="tumli-select__arrow flex--00-auto">
+      <svg class="block fill-accent-color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+        <polygon points="7.41 8.84 12 13.42 16.59 8.84 18 10.25 12 16.25 6 10.25"></polygon>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Select -->
+  <select name="month" class="full-width tumli-select__field" data-onchange data-property-name="subscription.duration">
+    <option value="1">Month</option>
+    <option value="6">6 month</option>
+    <option value="12">Year</option>
+  </select>
+  <!-- /Select -->
+
+  <div class="tumli-select__options">
+    <ul class="tumli-select__list text-style-7 js-add-list-delay">
+      <li class="tumli-select__list-item flex flex--align-center flex--between" data-value="1" data-index="0"
+        data-title="Month">
+        <span class="text-style-7 pr-l">
+          Month
+        </span>
+        <span class="text-style-1 tumli-select--main-color-on-active">$10.99</span>
+      </li>
+
+      <li class="tumli-select__list-item flex flex--align-center flex--between" data-value="6" data-index="1"
+        data-title="6 month">
+        <span class="text-style-7 pr-l">
+          6 month
+        </span>
+        <span class="text-style-1 tumli-select--main-color-on-active">$20.99</span>
+      </li>
+
+      <li class="tumli-select__list-item flex flex--align-center flex--between" data-value="12" data-index="2"
+        data-title="Year">
+        <span class="text-style-7 pr-l">
+          Year
+        </span>
+        <span class="text-style-1 tumli-select--main-color-on-active">$30.99</span>
+      </li>
+    </ul>
+  </div>
+</div>

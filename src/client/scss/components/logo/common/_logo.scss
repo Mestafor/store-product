@@ -1,0 +1,16 @@
+/*
+* Logo
+*/
+
+.#{$project-prefix}-logo {
+  display: flex;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+@import './__img/logo__img';

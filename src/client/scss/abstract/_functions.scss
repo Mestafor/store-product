@@ -1,0 +1,58 @@
+// $size: font size
+// $px: indent in pixel
+@function pxToEm($size, $px) {
+    @return ($px / $size) * 1em;
+}
+
+@function pxToRem($px) {
+    @return ($px / $html-font-size) * 1rem;
+}
+
+@function getLineHeight($px, $lineHeightPx) {
+    @return $lineHeightPx / $px;
+}
+
+/**
+* param {'default' | 'submit'} $name
+*/
+@function getPreloader($name) {
+    @return map-get($preloaders, $name);
+}
+
+/**
+* param {'card'} $name
+*/
+@function getInputBg($name) {
+    @return map-get($inputs-bg, $name);
+}
+
+/**
+* param {'xs'} $media
+*/
+@function getMedia($media) {
+    @return map-get($media-map, $media);
+}
+
+/*
+* 
+*/
+@mixin setContentToMedia() {
+
+    @media #{getMedia(md)} {
+        &-md {
+            @content;
+        }
+    }
+
+    @media #{getMedia(sm)} {
+        &-sm {
+            @content;
+        }
+    }
+
+    @media #{getMedia(xs)} {
+        &-xs {
+            @content;
+        }
+    }
+}

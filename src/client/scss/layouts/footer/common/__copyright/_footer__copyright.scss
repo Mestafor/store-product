@@ -1,0 +1,22 @@
+.#{$project-prefix}-footer__copyright {
+  $copyright: &;
+
+  @include note-text;
+
+  padding: 11px 0;
+  text-align: center;
+
+  &:not(:first-child) {
+    border-top: 1px solid var(--color2);
+  }
+
+  // Mod with menu
+  &--with-menu {
+    display: flex;
+
+    @media(min-width: $tablet) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+}

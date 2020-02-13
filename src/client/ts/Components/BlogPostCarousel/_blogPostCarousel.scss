@@ -1,0 +1,206 @@
+@import '../../../scss/abstract/variables';
+@import '../../../scss/abstract/misc';
+@import '../../../scss/abstract/functions';
+
+@mixin createTumliPostItems($desktopCount: 3, $tabletCount: 2, $mobileCount: 1) {
+    @media(max-width: 767px) {
+        width: calc((100% / #{$mobileCount}) - #{$mobile-gap * ($mobileCount - 1) / $mobileCount});
+    }
+
+    @media(min-width: 768px) and (max-width: 992px - 1px) {
+        width: calc((100% / #{$tabletCount}) - #{$mobile-gap * ($tabletCount - 1) / $tabletCount});
+    }
+
+    @media(min-width: 992px) {
+        width: calc((100% / #{$desktopCount}) - #{$desktop-gap * ($desktopCount - 1) / $desktopCount});
+    }
+}
+
+@mixin createTumliPurchaseBundleItems($large: 4, $desktopCount: 3, $tabletCount: 2, $mobileCount: 2, $small: 1) {
+    @media(max-width: 374px) {
+        width: calc((100% / #{$small}) - #{$mobile-gap * ($small - 1) / $small});
+    }
+
+    @media(min-width: 375px) and (max-width: 767px) {
+        width: calc((100% / #{$mobileCount}) - #{$mobile-gap * ($mobileCount - 1) / $mobileCount});
+    }
+
+    @media(min-width: 768px) and (max-width: 992px - 1px) {
+        width: calc((100% / #{$tabletCount}) - #{$mobile-gap * ($tabletCount - 1) / $tabletCount});
+    }
+
+    @media(min-width: 992px) and (max-width: 1299px) {
+        width: calc((100% / #{$desktopCount}) - #{$desktop-gap * ($desktopCount - 1) / $desktopCount});
+    }
+
+    @media(min-width: 1300px) {
+        width: calc((100% / #{$large}) - #{$desktop-gap * ($large - 1) / $large});
+    }
+}
+
+.#{$project-prefix}-post-carousel {
+    $self: &;
+
+    position: relative;
+
+    &-section {
+        &:hover {
+            #{$self} {
+                &__scroll {
+                    @media(min-width: 992px) {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        #{$self} {
+            &__scroll {
+                @media(min-width: 992px) {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__item {
+        $item: &;
+
+        display: block;
+        flex: 0 0 auto;
+
+        @include createTumliPostItems(3, 2, 1);
+
+        &:not(:last-child) {
+            @media(max-width: $desktop - 1px) {
+                margin-right: $mobile-gap;
+            }
+
+            @media(min-width: $desktop) {
+                margin-right: $desktop-gap;
+            }
+        }
+
+        &--categories {
+            @media(max-width: 767px) {
+                width: calc((100% / 2) - #{$mobile-gap * (2 - 1) / 2});
+            }
+
+            @media(min-width: 768px) and (max-width: 992px - 1px) {
+                width: 170px;
+            }
+
+            @media(min-width: 992px) {
+                width: 170px;
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    &__scroll {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--accent-color);
+        transform-origin: top left;
+        cursor: pointer;
+        z-index: 5;
+        transform: scale(0, 1) translateZ(0);
+
+        @media(min-width: 992px) {
+            transition: opacity .2s ease-out;
+            opacity: 0;
+        }
+
+        &-wrapper {
+            position: relative;
+            margin: 0 auto;
+
+            @media(min-width: $tablet) {
+                width: $container-width - $container-gap * 2;
+                max-width: calc(100% - #{$container-gap * 2});
+            }
+
+            @media(max-width: $tablet - 1px) {
+                width: $container-width - $container-mobile-gap * 2;
+                max-width: calc(100% - #{$container-mobile-gap * 2});
+            }
+        }
+    }
+}
+
+.#{$project-prefix}-post-carousel-wrapper {
+
+    &:not(.#{$project-prefix}post-carousel-wrapper--md) {
+        position: relative;
+        padding-bottom: 17px;
+        margin-bottom: -17px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        @include webkitScroll;
+    }
+
+    &--md {
+        @media(min-width: $desktop) {
+            position: relative;
+            padding-bottom: 17px;
+            margin-bottom: -17px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            @include webkitScroll;
+        }
+    }
+
+    &--sm {
+        @media(max-width: $desktop - 1px) and (min-width: $tablet) {
+            position: relative;
+            padding-bottom: 17px;
+            margin-bottom: -17px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            @include webkitScroll;
+        }
+    }
+
+    &--xs {
+        @media(max-width: $tablet - 1px) {
+            position: relative;
+            padding-bottom: 17px;
+            margin-bottom: -17px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            @include webkitScroll;
+        }
+    }
+
+    &.--moving {
+        cursor: move;
+
+        .#{$project-prefix}post-carousel__disable-on-move,
+        label,
+        input,
+        a {
+            pointer-events: none;
+        }
+    }
+}
+
+.full-container-wrapper {
+    top: -1px;
+
+    &:hover {
+        .#{$project-prefix}-post-carousel__scroll {
+            @media(min-width: 992px) {
+                opacity: 1;
+            }
+        }
+    }
+}

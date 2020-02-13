@@ -1,0 +1,73 @@
+.#{$project-prefix}-more-text {
+    $self: &;
+    
+    &__link {
+        &-show {
+
+        }
+
+        &-close {
+            display: none;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        transition: transform .2s ease-in-out;
+    }
+
+    &.show {
+        #{$self} {
+            &__icon {
+                transform: rotate(180deg);
+            }
+
+            &__link {
+                &-show {
+                    display: none;
+                }
+                &-close {
+                    display: block;
+                }
+            }
+        }
+
+        .#{$project-prefix}-more-text {
+            #{$self} {
+                &__icon {
+                    transform: rotate(0);
+                }
+    
+                &__link {
+                    &-show {
+                        display: block;
+                    }
+            
+                    &-close {
+                        display: none;
+                    }
+                }
+            }
+            
+            &.show {
+                #{$self} {
+                    &__icon {
+                        transform: rotate(180deg);
+                    }
+        
+                    &__link {
+                        &-show {
+                            display: none;
+                        }
+                        &-close {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import './__content/more-text__content';
+@import './__link/more-text__link';

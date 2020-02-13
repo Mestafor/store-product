@@ -1,0 +1,29 @@
+// .grid--gap-col-tablet-xs {
+//   grid-column-gap: $grid-gap-xs;
+// }
+
+// .grid--gap-col-tablet-sm {
+//   grid-column-gap: $grid-gap-sm;
+// }
+
+// .grid--gap-col-tablet-default {
+//   grid-column-gap: $grid-gap-default;
+// }
+
+// .grid--gap-col-tablet-l {
+//   grid-column-gap: $grid-gap-l;
+// }
+
+// .grid--gap-col-tablet-xl {
+//   grid-column-gap: $grid-gap-xl;
+// }
+
+// .grid--gap-col-tablet-none {
+//   grid-column-gap: 0;
+// }
+
+@each $key, $value in $grid-gaps {
+  .grid--gap-col-tablet-#{$key} {
+    grid-column-gap: #{$value};
+  }
+}

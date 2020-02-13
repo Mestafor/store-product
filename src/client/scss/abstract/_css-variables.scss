@@ -1,0 +1,53 @@
+@import './variables';
+
+:root {
+    --html-font-size: 13px;
+    --line-height: 1.5;
+    --default-indent: 15px;
+    // Fonts
+    --main-font: ProximaNova, Arial, sans-serif;
+    // Colors
+    --main-color: #777;
+    --second-color: #333;
+    --accent-color: #fb2539;
+
+    --success-color: #57ae85;
+    --error-color: #fb2539;
+    --warning-color: #ff8941;
+
+    --placeholder-color: #999;
+    --white-color: #fff;
+    
+    --color1: #ffdc2c;
+    --color2: #3c3f43;
+    --color4: #363636;
+    --color5: #eff0f3;
+    --color6: #e9eaeb;
+    --color7: #474a4e;
+    --color8: rgba(255, 255, 255, 0.7);
+    --color9: rgba(255, 255, 255, 0.44);
+    --color10: rgba(255, 255, 255, 0.4);
+    --color11: #595c5f;
+    --color12: #c6c6c6;
+    --color13: #777;
+    --color14: #999;
+    --color15: #ddefe7;
+
+    --pinterest-color: #e6001a;
+    --facebook-color: #3d5a98;
+    --google-color: #db4c3f;
+
+
+    // Borders
+    --border-color: #d8d9dc;
+    --border-color-2: #5a5e63;
+    --border-radius-default: 0;
+    --border-radius-input: 23px;
+
+    // Gaps
+    --grid-gap: 30px;
+    --grid-gap-mobile: 15px;
+    
+    // Heights
+    --header-height: 72px;
+}

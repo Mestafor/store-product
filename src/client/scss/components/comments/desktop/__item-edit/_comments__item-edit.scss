@@ -1,0 +1,13 @@
+
+.#{$project-prefix}-comments__item {
+    &-edit {
+      a {
+        opacity: 0;
+        transition: opacity .4s ease;
+
+        .#{$project-prefix}comments__item-content:hover & {
+          opacity: 1;
+        }
+      }
+    }
+  }

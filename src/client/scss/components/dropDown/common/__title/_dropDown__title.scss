@@ -1,0 +1,13 @@
+.#{$project-prefix}-dropDown__title {
+  // font-weight: bold;
+  transition: .4s ease-out;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &-text {
+    position: relative;
+    display: inline-block;
+    transition: transform .2s ease-out;
+    margin-right: -4px;
+  }
+}

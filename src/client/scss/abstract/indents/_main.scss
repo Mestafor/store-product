@@ -1,0 +1,112 @@
+$indent-xs: 4px;
+$indent-sm: 7px;
+$indent-default: 15px;
+$indent-l: 20px;
+$indent-xl: 30px;
+$indent-xxl: 45px;
+
+$indents: ( //
+    -1: -1px, //
+    0: 0px, //
+    1: 1px, //
+    auto: auto, //
+    xs: $indent-xs, //
+    sm: $indent-sm, //
+    default: $indent-default, //
+    l: $indent-l, //
+    xl: $indent-xl, //
+    xxl: $indent-xxl, //
+    custom-1: 9px, //
+    custom-2: 37px, //
+    custom-3: 70px, //
+    custom-4: 80px, //
+    custom-5: 17px, //
+    custom-6: 27px, //
+    custom-7: 74px, //
+    custom-8: 40px, //
+    custom-9: 13px, //
+    custom-10: 60px, //
+);
+
+@each $key, $value in $indents {
+
+    .m-#{$key} {
+        margin: $value !important;
+
+        @include setContentToMedia {
+            margin: $value !important;
+        }
+    }
+
+    .mt-#{$key} {
+        margin-top: $value !important;
+
+        @include setContentToMedia {
+            margin-top: $value !important;
+        }
+    }
+
+    .mr-#{$key} {
+        margin-right: $value !important;
+
+        @include setContentToMedia {
+            margin-right: $value !important;
+        }
+    }
+
+    .mb-#{$key} {
+        margin-bottom: $value !important;
+
+        @include setContentToMedia {
+            margin-bottom: $value !important;
+        }
+    }
+
+    .ml-#{$key} {
+        margin-left: $value !important;
+
+        @include setContentToMedia {
+            margin-left: $value !important;
+        }
+    }
+
+    .p-#{$key} {
+        padding: $value !important;
+
+        @include setContentToMedia {
+            padding: $value !important;
+        }
+    }
+
+    .pt-#{$key} {
+        padding-top: $value !important;
+
+        @include setContentToMedia {
+            padding-top: $value !important;
+        }
+    }
+
+    .pr-#{$key} {
+        padding-right: $value !important;
+
+        @include setContentToMedia {
+            padding-right: $value !important;
+        }
+    }
+
+    .pb-#{$key} {
+        padding-bottom: $value !important;
+
+        @include setContentToMedia {
+            padding-bottom: $value !important;
+        }
+    }
+
+    .pl-#{$key} {
+        padding-left: $value !important;
+
+        @include setContentToMedia {
+            padding-left: $value !important;
+        }
+    }
+}

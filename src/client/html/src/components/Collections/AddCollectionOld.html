@@ -1,0 +1,113 @@
+<div class="grid__item u-relative">
+
+  <div class="tumli-product__thumb">
+    <div class="tumli-product__thumb-img-wrapper--ratio-1:0.7">
+    </div>
+  </div>
+
+  <div class="tumli-product__content tumli-product__content--bigger"></div>
+
+  <div
+    class="tumli-checkbox box-model-1 box-model-2 flex flex--align-center box absolute-centered full-width full-height">
+
+    <input type="checkbox" hidden class="box__input">
+
+    <div class="input-box full-width input-box--animate-content">
+
+      <div class="input-box__content">
+
+        <div class="input-box__show-on-checked">
+
+          <form class="tumli-form" action="//create_board" method="POST" data-testing="test_loading">
+            <!-- <form class="tumli-form tumli-form--registration" action="//signin" method="GET" data-testing="test_500_error"> -->
+
+
+            <label class="tumli-form__registr-email error">
+              <!-- <span class="text-style-8 main-color pb-sm text-center block">
+              Create New Board <br>
+              For You Collection
+            </span> -->
+              <input type="text"
+                class="full-width tumli-form__remove-bottom-radius-on-changed tumli-input__field  tumli-input__field--default-paddings"
+                name="name" placeholder="Create the Board" required="">
+
+              <!-- Error -->
+              <span class="error__content">Field is not valid</span>
+              <span class="error__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                  height="20px" viewBox="0 0 20 20" version="1.1">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-993.000000, -682.000000)" fill="#DF0F0F" fill-rule="nonzero">
+                      <path
+                        d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </label>
+
+            <div class="tumli-form__show-on-changed">
+              <button class="full-width tumli-btn tumli-btn--no-hover form-submit u-none-br-tl u-none-br-tr anim-box"
+                type="submit">
+
+                <span class="form-submit__text anim-box__text anim-box__text--1">
+                  Create the Board
+                </span>
+
+                <span class="anim-box__icon anim-box__icon--1">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                    height="24px" viewBox="0 0 24 24" version="1.1" fill="#fff">
+                    <g transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) ">
+                      <polygon points="15.41 7.41 14 6 8 12 14 18 15.41 16.59 10.83 12"></polygon>
+                    </g>
+                  </svg>
+                </span>
+
+                <span class="form-submit__sending"></span>
+
+                <span class="form-submit__success">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+                  </svg>
+                </span>
+
+                <span class="form-submit__error">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                    height="20px" viewBox="0 0 20 20" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g transform="translate(-993.000000, -682.000000)" fill="currentColor" fill-rule="nonzero">
+                        <path
+                          d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+                        </path>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="input-box__hide-on-checked cursor-pointer box__activate">
+          <div class="text-center flex--00-auto full-width">
+            //= ./partials/addCollectionSvg.html
+
+            <div class="text-style-8 main-color">
+              Create New Board <br>
+              For You Collection
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

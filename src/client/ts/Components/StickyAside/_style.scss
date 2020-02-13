@@ -1,0 +1,107 @@
+/**
+* Block with asides
+*/
+
+.#{$project-prefix}-asides-block {
+    $self: &;
+
+    position: relative;
+    transition: transform .2s ease-in-out;
+
+
+    &__content {
+        width: 100%;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__aside {
+        display: none;
+        position: absolute;
+        top: 0;
+        width: calc((#{$container-width - $container-gap * 2} - #{$content-width-small}) / 2) !important;
+
+        @media(min-width: $container-width) {
+            display: block;
+        }
+
+        &--left {
+            left: 0;
+            padding-right: 30px;
+            transform: translateX((#{(($container-width - $container-gap * 2) - $content-width-small) / -2}));
+        }
+
+        &--right {
+            right: 0;
+            padding-left: 30px;
+            transform: translateX((#{(($container-width - $container-gap * 2) - $content-width-small) / 2}));
+        }
+    }
+}
+
+.#{$project-prefix}-sticky-block {
+    $self: &;
+
+    transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+
+
+    &.--fix {
+        &#{$self} {
+            &--show-on-fix {
+                display: block;
+            }
+        }
+    }
+
+    &--show-on-fix {
+        display: none;
+    }
+
+    &--fix-after-hide {
+        &.--fix {
+            animation: fix-sticky-box .6s ease-in-out forwards;
+        }
+    }
+
+    &.--fix {
+
+        #{$self} {
+            &__hide-on-fixed {
+                display: none;
+            }
+        }
+
+        input:not(:checked) ~ {
+            #{$self} {
+                // need to use some input
+                &__hide-on-fixed-if-not-checked {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__hide-on-fixed,
+    &__hide-on-fixed-if-not-checked {
+
+    }
+}
+
+@keyframes fix-sticky-box {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

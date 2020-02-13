@@ -1,0 +1,129 @@
+<!-- Cart Product 1 -->
+<!-- 
+purchase-product
+purchase-product__remove
+-->
+<div class="purchase-product box-model-1 box-hover-2 grid grid--product-item box-model-out-indent-b js-hover-box"
+  data-purchase-product-id="6">
+
+  <!-- Product Image -->
+  <div class="grid__item grid__item--col-end-2 grid__item--row-end-desktop-2 grid__item--col-8-xs">
+    //= ./CartProductImage2.html
+  </div>
+  <!-- /Product Image -->
+
+  <!-- Product Info -->
+  <div class="grid__item grid__item--col-end-6 box-model-default-l box-model-default-r pb-l box-model-default-t flex grid__item--col-8-xs">
+    <div class="flex--11-auto">
+      <div class="h3 h3--remove-line-height pb-default">
+        <a class="block js-hover-box__item js-hover-box__item--accent-color" href="#" target="_blank">
+          Business Card Presentation VOL. 1
+          Mock-ups international in two rows
+        </a>
+      </div>
+      //= ./CartProductAuthor.html
+    </div>
+
+    <div class="flex--00-auto pl-default flex flex--direction-column-reverse-mobile ">
+      <div class="hide-md hide-sm flex--00-auto mt-auto pt-l">
+        //= ./CartProductRemoveSelect.html
+      </div>
+
+      //= ./CartProductDiscountPrice.html
+
+      <div class="flex--00-auto text-style-2 pl-sm remove-line-height pb-xs" data-discount-amount>
+        $5.50
+      </div>
+    </div>
+  </div>
+  <!-- /Product Info -->
+
+  <!-- Product Options -->
+  <div class="grid__item grid__item--col-end-8 grid__item--col-end-desktop-6 mt-auto">
+    <div class="hide-md box-model-default-b">
+      <hr>
+    </div>
+
+    <div class="mt-auto pb-default box-model-default-l box-model-default-r box-model-default-b flex flex--align-center">
+
+      <div class="flex--01-auto">
+        //= ./CartProductFormatSelect.html
+      </div>
+
+
+      <div class="flex--01-auto pl-sm">
+        //= ./CartProductLicenseSelect.html
+      </div>
+
+      <div class="flex--00-auto pl-sm">
+        //= ./CartInfoBox.html
+      </div>
+
+      <!-- Remove -->
+      //= ./CartRemove.html
+      <!-- Remove -->
+
+    </div>
+
+    <div class="hide-md">
+      <hr>
+    </div>
+
+    <hr class="hide-sm hide-xs">
+  </div>
+  <!-- /Product Options -->
+
+  <!-- Cart Product Extra Items -->
+  <div class="grid__item grid__item--col-end-8 purchase-product__hide-on-remove">
+    <!-- <hr class="hide-sm hide-xs"> -->
+
+    <!-- Additionaly -->
+    <div class="box-model-default-l box-model-default-r mb-l">
+      //= ./CartProductAdditionaly.html
+    </div>
+    <!-- /Additionaly -->
+
+    <div
+      class="box-model-default-l box-model-default-r pb-xl-md pb-l-sm pb-l-xs text-right text-style-3 h3--remove-line-height">
+      Total:&nbsp;<span data-total-amount>$23.99</span>
+    </div>
+
+  </div>
+  <!-- /Cart Product Extra Items -->
+
+  <script>
+    if (!window.tumli) {
+      window.tumli = {};
+    }
+
+    if (!window.tumli.purchaseProduct) {
+      window.tumli.purchaseProduct = {};
+    }
+
+    window.tumli.purchaseProduct['6'] = {
+      id: "6",
+      source: 'https://creativemarket.com/BrandPacks/946359-Trifold-After-School-Care-Template?u=ambr',
+      title: 'Colorful After School Care Brochure',
+      thumbnail: 'https://tumli.net/files/uploads/2019/7/10/colorful-after-school-care-brochure-cover/colorful-after-school-care-brochure-cover.970x.jpg',
+      amount: 1099,
+      currency: "$",
+      discount: 50,
+      //= ./CartProductFormatJS.html
+      support: {
+        '12_month': {
+          name: '12_month',
+          amount: 899,
+          used: false
+        },
+        'designer_support': {
+          name: 'designer_support',
+          amount: 2499,
+          used: false
+        }
+      },
+    };
+  </script>
+
+</div>
+
+<!-- /Cart Product 1 -->

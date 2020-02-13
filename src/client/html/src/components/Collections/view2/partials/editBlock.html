@@ -1,0 +1,84 @@
+<!-- Edit Block -->
+<div class="tumli-product__edit">
+
+  <form class="mt-0 flex flex--direction-column box-model-2 full-width" action="//product-edit" method="GET"
+    data-testing="test_loading">
+
+    <input type="text" hidden="" value="collection-or-product-id">
+
+    <label class="tumli-form__registr-email error">
+      <input type="text" name="title" placeholder="New Title" required="required" class="full-width"
+        value="Archive test 2.zip">
+
+      <!-- Error -->
+      <span class="error__content">Field is not valid</span>
+      <span class="error__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"
+          viewBox="0 0 20 20" version="1.1">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-993.000000, -682.000000)" fill="#DF0F0F" fill-rule="nonzero">
+              <path
+                d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </span>
+    </label>
+
+    <div class="flex flex--around mt-default">
+      <div class="text-style-4 tumli-form__submit-on-click set-preloader set-preloader--old flex--00-auto cursor-pointer remove-line-height">
+        <span class="set-preloader__hide">
+          Save Changes
+        </span>
+      </div>
+
+      <div class="flex--00-auto pl-default"></div>
+
+      <a class="accent-color link-style-2 flex--00-auto remove-line-height" href="#" data-action="product-show-hide-edit">
+        Discard Changes
+      </a>
+    </div>
+
+    <button
+      class="full-width tumli-btn tumli-btn--no-hover form-submit tumli-form__show-on-changed u-none-br-tl u-none-br-tr anim-box hide"
+      type="submit">
+      <span class="form-submit__text anim-box__text anim-box__text--1">
+        Save Changes
+      </span>
+      <span class="anim-box__icon anim-box__icon--1">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+          viewBox="0 0 24 24" version="1.1" fill="#fff">
+          <g transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) ">
+            <polygon points="15.41 7.41 14 6 8 12 14 18 15.41 16.59 10.83 12"></polygon>
+          </g>
+        </svg>
+      </span>
+
+      <span class="form-submit__sending"></span>
+
+      <span class="form-submit__success">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path fill="none" d="M0 0h24v24H0z"></path>
+          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+        </svg>
+      </span>
+
+      <span class="form-submit__error">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"
+          viewBox="0 0 20 20" version="1.1">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-993.000000, -682.000000)" fill="currentColor" fill-rule="nonzero">
+              <path
+                d="M1003,682 C997.48,682 993,686.48 993,692 C993,697.52 997.48,702 1003,702 C1008.52,702 1013,697.52 1013,692 C1013,686.48 1008.52,682 1003,682 Z M1003,697 C1002.45,697 1002,696.55 1002,696 L1002,692 C1002,691.45 1002.45,691 1003,691 C1003.55,691 1004,691.45 1004,692 L1004,696 C1004,696.55 1003.55,697 1003,697 Z M1004,689 L1002,689 L1002,687 L1004,687 L1004,689 Z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </span>
+
+    </button>
+
+  </form>
+</div>
+<!-- /Edit Block -->

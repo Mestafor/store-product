@@ -1,0 +1,195 @@
+// Tabs v.0.0.0
+// css only
+
+.tabs {
+  $self: &;
+
+  input:checked+ {
+    #{$self} {
+      &__content {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    $title: &;
+
+    flex: 0 0 auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+
+      &#{$title}--active-style-2,
+      #{$title}--active-style-2 {
+        color: var(--main-color) !important;
+      }
+    }
+
+    &--active-style-2 {
+      transition: color .2s ease-in-out;
+    }
+
+    &-wrapper {
+      position: relative;
+      overflow: hidden;
+
+      &--right {
+        &:after {
+          width: 45px;
+        }
+      }
+
+      &-scroll {
+        display: flex;
+        align-items: flex-start;
+        overflow-y: hidden;
+        overflow-x: auto;
+
+        &:after {
+          flex: 0 0 auto;
+          content: '';
+          display: inline-block;
+          width: 30px;
+          height: 1px;
+        }
+
+        &--right {
+          &:after {
+            width: 0;
+          }
+        }
+      }
+    }
+
+    &--style {
+      &-1 {
+        position: relative;
+        border: solid 1px #e1e1e1;
+        height: 39px;
+        padding: 5px 17px;
+        font-size: pxToRem(14px);
+        color: var(--second-color);
+
+        &#{$self}__title--active {
+          border-color: var(--accent-color);
+          z-index: 2;
+        }
+
+        + #{$self}__title {
+          margin-left: -1px;
+        }
+
+        @media(pointer: fine) {
+          transition: border-color .2s ease-in-out;
+
+          &:hover {
+            border-color: var(--accent-color);
+            z-index: 1;
+          }
+        }
+      }
+
+      &-2 {
+        position: relative;
+        font-size: pxToRem(16px);
+        font-weight: bold;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: -2px;
+
+        &:not(:last-child) {
+          margin-right: 68px;
+        }
+  
+        // TODO: same after as in link 2, create mixin
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: var(--accent-color);
+          opacity: 0;
+          transition: opacity .2s ease-in-out;
+        }
+
+        &#{$self}__title--active {
+          color: var(--accent-color);
+          border-color: var(--accent-color);
+          z-index: 2;
+
+          &:after {
+            opacity: 1;
+          }
+        }
+
+        @media(pointer: fine) {
+          transition: color .2s ease-in-out;
+
+          &:hover {
+            color: var(--accent-color);
+            z-index: 1;
+          }
+        }
+      }
+
+
+      &-3 {
+        height: 39px;
+        padding: 5px 17px;
+        border: solid 1px #e1e1e1;
+        transition: border-color .2s ease-in-out, color .2s ease-in-out;
+        font-weight: bold;
+        font-size: pxToRem(16px);
+        min-width: 170px;
+
+        &#{$self}__title--active {
+          border: solid 1px var(--accent-color);
+          z-index: 1;
+          color: var(--second-color);
+        }
+
+        + #{$self}__title {
+          margin-left: -1px;
+        }
+
+        @media(pointer: fine) {
+          &:hover {
+            border: solid 1px var(--accent-color);
+            z-index: 1;
+          }
+        }
+      }
+
+      &-4 {
+        height: 39px;
+        padding: 5px 17px;
+        border: solid 1px var(--color1);
+        background-color: var(--color1);
+        transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
+        font-weight: bold;
+        font-size: pxToRem(16px);
+        color: var(--second-color);
+
+        @media(pointer: fine) {
+          &:hover {
+            background-color: var(--white-color);
+          }
+        }
+      }
+    }
+
+    
+  }
+
+  &__content {
+    display: none;
+
+    &-wrapper {}
+  }
+}

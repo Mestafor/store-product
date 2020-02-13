@@ -1,0 +1,68 @@
+$grid-gap-xs: 7px;
+$grid-gap-sm: 15px;
+$grid-gap-default: 30px;
+$grid-gap-l: 45px;
+$grid-gap-xl: 60px;
+
+$grid-gaps: (
+    xs: 7px, //
+    sm: 15px, //
+    default: 30px, // 
+    l: 45px, // 
+    xl: 60px, // 
+    none: 0, // 
+    custom-1: 20px, // 
+    custom-2: 9px //
+);
+
+.inline-grid {
+    display: inline-grid;
+}
+
+.grid {
+    display: grid;
+
+    @media (min-width: $desktop) {
+        grid-gap: var(--grid-gap, 30px);
+    }
+
+    @media (max-width: $desktop - 1px) {
+        grid-gap: var(--grid-gap-mobile, 15px);
+    }
+
+    &--minmax-auto-rows {
+        grid-auto-rows: minmax(0, 1fr);
+
+        @include setContentToMedia {
+            grid-auto-rows: minmax(0, 1fr);
+        }
+    }
+
+    &--min-content-rows {
+        grid-template-rows: min-content;
+
+
+        @include setContentToMedia {
+            grid-template-rows: min-content;
+        }
+    }
+}
+
+// grid gaps
+.remove-default-item-gap {
+    @media(min-width: $desktop) {
+        margin-left: -#{$grid-gap-default};   
+    }
+    @media(max-width: $desktop - 1px) {
+        margin-left: -#{$grid-gap-sm};
+    }
+}
+
+// Mod
+@import "./--col/grid--col";
+@import "./--gap/grid--gap-col";
+@import "./--gap/grid--gap-row";
+@import "./--row-equal/grid--row-equal";
+
+// Elems
+@import "./__item/grid__item";

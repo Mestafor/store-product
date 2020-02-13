@@ -1,0 +1,22 @@
+/*
+* Tablet style
+* Author - Alex Miagotin
+* Version: unknown
+*/
+
+/*
+* Variables
+*/
+@import './scss-functionality';
+
+/*
+* Layout
+*/
+@import './layouts/grid/tablet/grid';
+@import './layouts/header/tablet/header';
+
+/*
+* Components
+*/
+@import './components/logo/tablet/logo';
+@import './components/badge/tablet/badge';

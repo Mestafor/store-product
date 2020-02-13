@@ -1,0 +1,20 @@
+@media (max-width: $tablet - 1px) {
+  .#{$project-prefix}-carousel {
+      $self: &;
+
+    &:not(.#{$project-prefix}-carousel--always-desktop) {
+
+      &#{$self}--single-item {
+        .#{$project-prefix}-carousel {
+          &__item {
+            width: 100%;
+          }
+        }
+      }
+
+      @import "./__items/carousel__items";
+      @import "./__item/carousel__item";
+      @import "./__nav/carousel__nav";
+    }
+  }
+}

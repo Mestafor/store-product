@@ -1,0 +1,100 @@
+/*
+* Accordion
+* TODO: we have 2 type of accordion, delete one of it
+*/
+
+.#{$project-prefix}-accordion {
+  $accordion: &;
+
+  input:checked~,
+  &--opened {
+    #{$accordion} {
+
+      &__icon {
+        transform: rotate(-180deg);
+      }
+
+      &__content-wrapper {
+        display: block;
+        // animation: show-accordion-content .2s ease-in-out;
+      }
+    }
+  }
+
+  &__title {
+    $title: &;
+
+    padding-bottom: 10px;
+
+    @media(max-width: $tablet - 1px) {
+      border-bottom: 1px solid var(--color2);
+
+      margin-right: -#{$container-mobile-gap};
+      margin-left: -#{$container-mobile-gap};
+      padding-left: #{$container-mobile-gap};
+      padding-right: #{$container-mobile-gap};
+    }
+
+    &--flex-between {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title-text {
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform .2s ease-in-out;
+
+    svg {
+      display: block;
+      vertical-align: middle;
+    }
+  }
+
+  &__content-wrapper {
+    display: none;
+    overflow: hidden;
+
+    @media(max-width: $tablet - 1px) {
+      margin-right: -#{$container-mobile-gap};
+      margin-left: -#{$container-mobile-gap};
+    }
+  }
+
+  &__content {
+    padding: 20px 0 26px;
+    border-bottom: 1px solid var(--color2);
+
+    @media(max-width: $tablet - 1px) {
+      padding-left: #{$container-mobile-gap};
+      padding-right: #{$container-mobile-gap};
+    }
+
+    @media(min-width: $tablet) {
+      border-top: 1px solid var(--color2);
+    }
+  }
+}
+
+.author-details {
+  &__aside {
+    width: 50px;
+  }
+}
+
+// @keyframes show-accordion-content {
+//   from {
+//     transform: translateY(-15px);
+//     opacity: 0;
+//   }
+
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }

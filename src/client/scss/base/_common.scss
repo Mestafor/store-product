@@ -1,0 +1,268 @@
+/*
+* Image
+*/
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+
+    &.#{$project-prefix}-lazy-load-image {
+        transition: opacity .4s ease-out;
+        opacity: 0;
+    }
+}
+
+/*
+* Blockquote
+*/
+
+blockquote {
+    padding: 22px 15px;
+    margin: 0;
+    background-color: var(--color1);
+    font-weight: 400;
+    border-radius: var(--border-radius-default);
+
+    @media(min-width: $tablet) {
+        flex-wrap: nowrap;
+        padding: 44px 52px;
+    }
+
+    .#{$project-prefix}single__content & {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    > figure {
+        flex: 0 0 auto;
+        margin: 0 auto;
+        padding: 16px 0 0 0;
+
+        @media(min-width: $tablet) {
+            margin: 0;
+        }
+
+        img {
+            display: block;
+            border-radius: 50%;
+            width: 120px;
+
+            .#{$project-prefix}single & {
+                border-radius: 50%;
+            }
+        }
+
+        + p {
+            padding: 10px 0 10px 42px;
+            margin-bottom: 0;
+
+            @media(max-width: $tablet - 1px) {
+                flex: 0 0 auto;
+                width: 100%;
+                padding: 15px 0;
+                text-align: center;
+            }
+        }
+    }
+
+
+    > span:first-child {
+        display: block;
+        flex: 0 0 auto;
+        align-self: flex-start;
+        width: calc(120px + 42px);
+        padding-right: 42px;
+        text-align: center;
+        // @include fontSizePxToRem(86px);
+        font-size: pxToRem(86px);
+        color: var(--second-color);
+        line-height: 0;
+        margin-top: 10px;
+    }
+
+    > p {
+        flex: 1 1 0;
+        padding: 10px 0 10px 2px;
+        margin-bottom: 0;
+    }
+
+    cite {
+        display: block;
+        margin-top: 13px;
+    }
+}
+
+q {
+    // font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: var(--color3);
+
+    &:before,
+    &after {
+        content: none;
+    }
+}
+
+cite {
+    font-weight: 300;
+    color: var(--second-color);
+    font-size: var(--html-font-size);
+}
+
+
+/*
+* Definition list
+*/
+dl {
+    margin: 0;
+}
+
+dt {
+    font-size: pxToRem(18px);
+    font-weight: bold;
+}
+
+dd {
+    margin: pxToEm($html-font-size, 5px) 0 pxToEm($html-font-size, 38px) pxToEm($html-font-size, 20px);
+}
+
+/*
+* List
+*/
+ul,
+ol {
+    padding: 0 0 0 15px;
+
+    > li {
+        margin-bottom: 0;
+
+        > ol,
+        > ul {
+            padding: pxToEm($html-font-size, 3px) 0 0 pxToEm($html-font-size, 25px);
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*
+* Select
+*/
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*
+* Input
+*/
+input {
+
+    border: 1px solid var(--border-color);
+    min-height: 46px;
+    padding: 10px 15px;
+    
+    &::-webkit-contacts-auto-fill-button {
+        visibility: hidden;
+        display: none !important;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+    }
+
+    &[type="email"] {
+        white-space: nowrap;
+    }
+
+    &:not(:disabled) {
+
+        &:hover {
+        }
+
+        &:focus {
+            
+        }
+    }
+
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        opacity: .5;
+        @include button--disabled();
+    }
+}
+
+/*
+* Button
+*/
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--second-color);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/*
+* Textarea
+*/
+textarea {
+
+    padding: 15px;
+    width: 100%;
+    
+    &:hover {
+        
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: var(--placeholder-color);
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: var(--placeholder-color);
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: var(--placeholder-color);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--placeholder-color);
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--placeholder-color);
+}
+
+::placeholder {
+    /* Most modern browsers support this now. */
+    color: var(--placeholder-color);
+}
+
+hr {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    margin: 0;
+}

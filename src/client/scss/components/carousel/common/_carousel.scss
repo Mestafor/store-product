@@ -1,0 +1,546 @@
+/*
+* Carousel
+* Каруселька для sticky постів та для продуктів
+*/
+
+$carousel-image-width: 65.9%;
+$duration: .6s;
+
+@mixin desktopNav {
+    $nav: &;
+
+    &-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 0;
+        z-index: 100;
+    }
+
+    &-next,
+    &-prev {
+        position: absolute;
+        display: flex;
+        color: var(--color4);
+        fill: var(--color4);
+        padding: 14px 5px;
+        z-index: 10;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity .4s ease, transform .2s ease-in-out;
+        transform-origin: center;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #000;
+            opacity: .56;
+        }
+        // On touch screen
+        @media (pointer:coarse) {
+            opacity: 1;
+        }
+
+        &--style-1 {
+            padding: 20px;
+
+            &:before {
+                background-color: var(--accent-color);
+                border-radius: 50% !important;
+                opacity: 1;
+            }
+        }
+    }
+
+    &-prev {
+        left: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:before {
+            border-top-right-radius: var(--border-radius-default);
+            border-bottom-right-radius: var(--border-radius-default);
+        }
+
+        &--left {
+            left: 0;
+            transform: translateY(-50%) translateX(-50%);
+
+            .full-container-wrapper & {
+                @media(min-width: $tablet) {
+                    left: $container-gap;
+                }
+
+                @media(max-width: $tablet - 1px) {
+                    left: $container-mobile-gap;
+                }
+            }
+
+            &#{$nav}-prev--style-1:not(#{$nav}-prev--left-hide) {
+                @media(pointer: fine) {
+                    &:hover {
+                        transform: translateY(-50%) translateX(-50%) scale(1.1);
+                    }
+                }
+            }
+
+            &-hide {
+                transform: translateY(-50%) translateX(-50%) scale(0.001);
+            }
+        }
+    }
+
+    &-next {
+        left: calc(#{$carousel-image-width} - 1px);
+        top: 50%;
+        transform: translateY(-50%) translateX(-100%);
+
+        &:before {
+            border-top-left-radius: var(--border-radius-default);
+            border-bottom-left-radius: var(--border-radius-default);
+        }
+
+        &--right {
+            left: unset;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) translateX(50%);
+
+            .full-container-wrapper & {
+                @media(min-width: $tablet) {
+                    right: $container-gap;
+                }
+
+                @media(max-width: $tablet - 1px) {
+                    right: $container-mobile-gap;
+                }
+            }
+
+            &#{$nav}-next--style-1:not(#{$nav}-next--right-hide) {
+                @media(pointer: fine) {
+                    &:hover {
+                        transform: translateY(-50%) translateX(50%) scale(1.1);
+                    }
+                }
+            }
+
+
+            &-hide {
+                transform: translateY(-50%) translateX(50%) scale(0.001);
+            }
+        }
+    }
+}
+
+
+@mixin desktopItem {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    transition: transform $duration ease, opacity $duration ease;
+    transform-origin: bottom;
+
+    .#{$project-prefix}-carousel--loaded & {
+        &:not([class*='#{$project-prefix}carousel__item--']) {
+            opacity: 0;
+            z-index: 1;
+            transform: translateY(20px) scale(.95);
+        }
+    }
+
+    &:not(:first-child) {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+    }
+
+    &--transparent-bg {
+        background-color: transparent;
+    }
+
+    &--cloned {
+        display: block;
+    }
+}
+
+@mixin topCarouselItem {
+    opacity: 0;
+    transform: translateY(-20px) scale(.95);
+    transform-origin: top;
+
+    &--active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &--0 {
+        z-index: 3;
+        transform: translateY(0) scale(1);
+    }
+
+    &--1 {
+        opacity: .7;
+        transform: translateY(-10px) scale(.975);
+    }
+
+    &--2 {
+        opacity: .3;
+        transform: translateY(-20px) scale(.95);
+    }
+}
+
+@mixin productInCarousel {
+    .#{$project-prefix}-product {
+        &__thumb {
+
+            &-img-wrapper,
+            & > a {
+                padding-bottom: 27.9% * 2;
+            }
+        }
+    }
+
+    .#{$project-prefix}-article {
+        justify-content: space-between;
+        padding-left: $carousel-image-width;
+        position: relative;
+        height: 100%;
+        min-height: 472px;
+
+        &.#{$project-prefix}-carousel__item {
+            &--active {
+
+                .#{$project-prefix}-article {
+
+                    &__cat,
+                    &__content {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &__header {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: $carousel-image-width;
+            height: 100%;
+            border-top-left-radius: inherit;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: inherit;
+        }
+
+        &__thumb {
+            height: 100%;
+            margin: 0;
+            border-top-left-radius: inherit;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: inherit;
+            padding-bottom: 0;
+
+            img {
+                border-top-left-radius: inherit;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: inherit;
+            }
+        }
+
+        &__cat {
+            padding-top: 25px;
+        }
+    }
+}
+
+
+.#{$project-prefix}-carousel {
+    $self: &;
+
+    position: relative;
+    padding: 0;
+
+    &:hover {
+        z-index: 2;
+    }
+
+    .#{$project-prefix}single__content & {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__items {
+        position: relative;
+    }
+
+    &__item {
+        $item: &;
+
+        &--active {
+            #{$item} {
+                &-btr-none-on-active {
+                    border-top-right-radius: var(--border-raidus-default) !important;
+                }
+            }
+        }
+
+        .#{$project-prefix}-carousel--always-desktop & {
+            @include desktopItem();
+        }
+
+        .#{$project-prefix}-carousel--loaded & {
+            &--active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            &--0 {
+                z-index: 3;
+                transform: translateY(0) scale(1);
+            }
+
+            &--1 {
+                z-index: 2;
+                opacity: .7;
+                transform: translateY(10px) scale(.975);
+            }
+
+            &--2 {
+                z-index: 1;
+                opacity: .3;
+                transform: translateY(20px) scale(.95);
+            }
+        }
+
+
+        @media(min-width: $tablet) {
+            @include desktopItem();
+        }
+    }
+
+    &__nav {
+        &-wrapper {
+            @media(max-width: $tablet - 1px) {
+                display: none;
+            }
+        }
+
+        &-prev,
+        &-next {
+            &--vertical-center {
+                margin-top: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+        }
+
+        .#{$project-prefix}-carousel--always-desktop & {
+            @include desktopNav();
+        }
+
+        @media(min-width: $tablet) {
+            @include desktopNav();
+        }
+    }
+
+    &--ratio-1\:0\.7 {
+        .#{$project-prefix}-carousel__nav {
+
+            &-prev,
+            &-next {
+                margin-top: calc(72.7% / 2) !important;
+            }
+        }
+    }
+
+    &--loaded {
+
+        &.#{$project-prefix}-carousel--bottom-small {
+
+            .#{$project-prefix}-carousel {
+                &__item {
+                    &--1 {
+                        opacity: .7;
+                        transform: translateY(5px) scale(.975);
+                    }
+
+                    &--2 {
+                        opacity: .3;
+                        transform: translateY(10px) scale(.95);
+                    }
+                }
+            }
+        }
+
+
+        &.#{$project-prefix}-carousel--always-desktop {
+
+            @include onlyMouseDevice {
+                &:hover {
+                    .#{$project-prefix}-carousel {
+                        &__nav {
+
+                            &-prev,
+                            &-next {
+                                opacity: .8;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include onlyTouchDevice {
+                .#{$project-prefix}-carousel {
+                    &__nav {
+
+                        &-prev,
+                        &-next {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .#{$project-prefix}-carousel {
+                &__nav {
+
+                    &-prev,
+                    &-next {
+                        opacity: 1;
+
+                        &--vertical-center {
+                            margin-top: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+
+            &.#{$project-prefix}-carousel--top {
+                .#{$project-prefix}-carousel {
+                    &__item {
+                        @include topCarouselItem();
+                    }
+                }
+
+                &-small {
+                    .#{$project-prefix}-carousel {
+                        &__item {
+                            &--1 {
+                                opacity: .7;
+                                transform: translateY(-5px) scale(.975);
+                            }
+
+                            &--2 {
+                                opacity: .3;
+                                transform: translateY(-10px) scale(.95);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media(min-width: $tablet) {
+            @include onlyMouseDevice {
+                &:hover {
+                    .#{$project-prefix}-carousel {
+                        &__nav {
+
+                            &-prev,
+                            &-next {
+                                opacity: .8;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include onlyTouchDevice {
+                .#{$project-prefix}-carousel {
+                    &__nav {
+
+                        &-prev,
+                        &-next {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--single-item {
+        .#{$project-prefix}-carousel {
+            &__nav {
+
+                &-prev,
+                &-next {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    &--full-nav {
+        .#{$project-prefix}-carousel {
+            &__nav {
+
+                &-prev,
+                &-next {
+                    display: flex;
+                    top: 0;
+                    margin-top: 27.9%;
+                    fill: var(--color4);
+
+                    &--vertical-center {
+                        margin-top: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &-next {
+                    left: unset;
+                    right: 1px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &--always-desktop {
+        @include productInCarousel();
+    }
+
+    @media(min-width: $tablet) {
+        @include productInCarousel();
+    }
+}
+
+@import './__item/carousel__item';

@@ -1,0 +1,11 @@
+.#{$project-prefix}-header__shares-title {
+  width: 70%;
+
+  p {
+    display: block;
+    height: auto;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: wrap;
+  }
+}

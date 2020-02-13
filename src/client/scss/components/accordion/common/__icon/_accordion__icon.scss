@@ -1,0 +1,13 @@
+.accordion__icon {
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  transform: translate(-100%, -50%);
+  cursor: pointer;
+
+  svg {
+    display: block;
+  }
+}
+
+@import './--relative/accordion__icon--relative';

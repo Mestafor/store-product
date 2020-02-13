@@ -1,0 +1,21 @@
+/*
+* Footer
+*/
+.#{$project-prefix}-footer {
+  flex: 0 0 auto;
+  border-top: 1px solid var(--color2);
+
+  // opacity: 0;
+  // transform: translateY(50px);
+  // transition: opacity $fadeIn-duration $fadeIn-timeline $fadeIn-duration, transform $fadeIn-duration $fadeIn-timeline $fadeIn-duration;
+
+  // .document-loaded & {
+  //   opacity: 1;
+  //   transform: translateY(0);
+  // }
+
+}
+
+@import './__copyright/footer__copyright';
+@import './__menu/footer__menu';
+@import './__grid/footer__grid';

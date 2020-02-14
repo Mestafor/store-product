@@ -11,6 +11,9 @@ import ModuleLoader, { DynamicModulesList } from './lib/ModuleLoader/index';
 import { ClickBehaviourHelper } from './Helpers/ClickBehaviourHelper';
 import ShowInViewport from './Components/ShowInViewport';
 
+import ImageZoom from 'js-image-zoom';
+// import Zooming from 'zooming'
+
 export enum AppActions {
     UPDATE_STICKY_ON_SCROLL = 'update-sticky-on-scroll',
     UPDATE_STICKY_ASIDE_POSITION = 'update-sticky-aside-position',
@@ -128,6 +131,26 @@ class App implements IApp {
         });
         // ===========================================================
         // ===========================================================
+
+        /**
+         * Zoom
+         */
+        
+        document.querySelectorAll<HTMLImageElement>('.js-img-zoom')
+        .forEach(img => {
+            const ImageZoomOptions = {
+                width: img.naturalWidth,
+                height: img.naturalHeight,
+                zoomWidth: 500,
+                offset: {vertical: 0, horizontal: 0},
+                zoomContainer: document.querySelector('.js-zoom-wrapper')
+            };
+            new ImageZoom(img, ImageZoomOptions);
+        });
+
+        // new Zooming({
+        //     // options...
+        //   }).listen('.img-zoomable')
 
         // ===========================================================
         // ======================== Video ========================

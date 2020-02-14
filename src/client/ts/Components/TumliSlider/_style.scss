@@ -54,3 +54,9 @@
     }
   }
 }
+
+.tns-inner {
+  > .flex {
+    display: block;
+  }
+}

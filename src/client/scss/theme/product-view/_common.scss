@@ -134,7 +134,8 @@
     color: var(--second-color);
     padding: 5px 16px;
     min-width: 264px;
-    min-height: 39px;
+    line-height: 39px;
+    height: 39px;
     background-color: var(--white-color);
 
     &:focus {
@@ -146,7 +147,8 @@
     border: none;
     color: var(--second-color);
     padding: 5px 16px;
-    min-height: 52px;
+    line-height: 52px;
+    height: 52px;
     background-color: var(--white-color);
 
     &:focus {

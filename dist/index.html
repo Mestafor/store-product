@@ -569,7 +569,7 @@
         <div class="grid grid--col-desktop-7 grid--col-1">
             <div class="grid__item grid__item--col-desktop-3">
                 
-                <div class="project-tns-slider-wrapper relative relative grid grid--col-11 grid--gap-col-custom-1">
+                <div class="project-tns-slider-wrapper relative relative grid grid--col-11 grid--gap-col-custom-1 js-zoom-wrapper">
                 
                     <!-- Thumbnails -->
                     <div class="grid__item grid__item--col-3">
@@ -583,8 +583,8 @@
                             <li class="project-tns-slider__thumbnail project-post-carousel__disable-on-move square-image">
                                 <div class="flex align-center justify-center square-image__content">
                                     <svg width="20px" height="36px">
-                                        <path fill-rule="evenodd"  fill="rgb(251, 37, 57)"
-                                        d="M19.060,16.660 L10.155,21.942 L10.132,21.921 C9.976,21.937 9.819,21.905 9.685,21.826 L1.411,16.854 C1.190,16.722 1.051,16.474 1.051,16.207 L1.023,5.930 C1.022,5.703 1.118,5.493 1.286,5.349 L1.385,5.275 L10.037,0.110 C10.259,-0.022 10.542,-0.022 10.763,0.109 L19.035,5.081 C19.235,5.200 19.367,5.413 19.391,5.650 L19.396,5.727 L19.424,16.009 C19.424,16.279 19.284,16.528 19.060,16.660 ZM2.496,15.774 L9.318,19.873 L9.296,11.327 L2.474,7.226 L2.496,15.774 ZM10.398,1.623 L3.191,5.926 L10.020,10.029 L17.227,5.726 L10.398,1.623 ZM17.951,7.024 L10.743,11.326 L10.767,19.882 L17.975,15.579 L17.951,7.024 ZM3.928,25.198 C2.686,25.198 1.768,25.691 0.935,26.622 L0.152,25.709 C0.969,24.689 2.278,23.897 4.030,23.897 C6.206,23.897 7.873,25.040 7.873,27.027 C7.873,28.715 6.495,29.559 5.424,29.752 C6.462,29.841 8.043,30.755 8.043,32.636 C8.043,34.588 6.529,36.013 4.030,36.013 C2.108,36.013 0.696,35.133 -0.001,34.078 L0.833,33.164 C1.496,34.078 2.653,34.711 3.996,34.711 C5.645,34.711 6.649,33.867 6.649,32.514 C6.649,31.054 5.492,30.439 3.825,30.439 C3.350,30.439 2.823,30.439 2.653,30.455 L2.653,29.120 C2.840,29.138 3.367,29.138 3.825,29.138 C5.254,29.138 6.462,28.557 6.462,27.203 C6.462,25.902 5.305,25.198 3.928,25.198 ZM20.001,29.946 C20.001,33.287 17.705,35.802 14.185,35.802 L10.308,35.802 L10.308,24.073 L14.185,24.073 C17.705,24.073 20.001,26.622 20.001,29.946 ZM11.720,34.500 L14.185,34.500 C16.940,34.500 18.538,32.461 18.538,29.946 C18.538,27.415 16.991,25.375 14.185,25.375 L11.720,25.375 L11.720,34.500 Z"/>
+                                        <path fill-rule="evenodd" fill="rgb(251, 37, 57)"
+                                            d="M19.060,16.660 L10.155,21.942 L10.132,21.921 C9.976,21.937 9.819,21.905 9.685,21.826 L1.411,16.854 C1.190,16.722 1.051,16.474 1.051,16.207 L1.023,5.930 C1.022,5.703 1.118,5.493 1.286,5.349 L1.385,5.275 L10.037,0.110 C10.259,-0.022 10.542,-0.022 10.763,0.109 L19.035,5.081 C19.235,5.200 19.367,5.413 19.391,5.650 L19.396,5.727 L19.424,16.009 C19.424,16.279 19.284,16.528 19.060,16.660 ZM2.496,15.774 L9.318,19.873 L9.296,11.327 L2.474,7.226 L2.496,15.774 ZM10.398,1.623 L3.191,5.926 L10.020,10.029 L17.227,5.726 L10.398,1.623 ZM17.951,7.024 L10.743,11.326 L10.767,19.882 L17.975,15.579 L17.951,7.024 ZM3.928,25.198 C2.686,25.198 1.768,25.691 0.935,26.622 L0.152,25.709 C0.969,24.689 2.278,23.897 4.030,23.897 C6.206,23.897 7.873,25.040 7.873,27.027 C7.873,28.715 6.495,29.559 5.424,29.752 C6.462,29.841 8.043,30.755 8.043,32.636 C8.043,34.588 6.529,36.013 4.030,36.013 C2.108,36.013 0.696,35.133 -0.001,34.078 L0.833,33.164 C1.496,34.078 2.653,34.711 3.996,34.711 C5.645,34.711 6.649,33.867 6.649,32.514 C6.649,31.054 5.492,30.439 3.825,30.439 C3.350,30.439 2.823,30.439 2.653,30.455 L2.653,29.120 C2.840,29.138 3.367,29.138 3.825,29.138 C5.254,29.138 6.462,28.557 6.462,27.203 C6.462,25.902 5.305,25.198 3.928,25.198 ZM20.001,29.946 C20.001,33.287 17.705,35.802 14.185,35.802 L10.308,35.802 L10.308,24.073 L14.185,24.073 C17.705,24.073 20.001,26.622 20.001,29.946 ZM11.720,34.500 L14.185,34.500 C16.940,34.500 18.538,32.461 18.538,29.946 C18.538,27.415 16.991,25.375 14.185,25.375 L11.720,25.375 L11.720,34.500 Z" />
                                     </svg>
                                 </div>
                             </li>
@@ -595,8 +595,12 @@
                 
                                     <div class="project-video__play-btn">
                                         <svg width="31px" height="31px" viewBox="0 0 62 62">
-                                            <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M31.000,-0.000 C48.121,-0.000 62.000,13.879 62.000,31.000 C62.000,48.121 48.121,62.000 31.000,62.000 C13.879,62.000 -0.000,48.121 -0.000,31.000 C-0.000,13.879 13.879,-0.000 31.000,-0.000 Z"></path>
-                                            <path fill-rule="evenodd" fill="rgb(251, 37, 57)" d="M31.002,53.979 C18.307,53.979 7.980,43.665 7.980,30.986 C7.980,18.308 18.307,7.993 31.002,7.993 C43.696,7.993 54.023,18.308 54.023,30.986 C54.023,43.665 43.696,53.979 31.002,53.979 ZM31.002,10.659 C19.779,10.659 10.649,19.778 10.649,30.986 C10.649,42.195 19.779,51.314 31.002,51.314 C42.224,51.314 51.354,42.195 51.354,30.986 C51.354,19.778 42.224,10.659 31.002,10.659 ZM24.802,21.191 L41.788,30.986 L24.802,40.781 L24.802,21.191 ZM27.471,36.163 L36.450,30.986 L27.471,25.810 L27.471,36.163 Z"></path>
+                                            <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                                                d="M31.000,-0.000 C48.121,-0.000 62.000,13.879 62.000,31.000 C62.000,48.121 48.121,62.000 31.000,62.000 C13.879,62.000 -0.000,48.121 -0.000,31.000 C-0.000,13.879 13.879,-0.000 31.000,-0.000 Z">
+                                            </path>
+                                            <path fill-rule="evenodd" fill="rgb(251, 37, 57)"
+                                                d="M31.002,53.979 C18.307,53.979 7.980,43.665 7.980,30.986 C7.980,18.308 18.307,7.993 31.002,7.993 C43.696,7.993 54.023,18.308 54.023,30.986 C54.023,43.665 43.696,53.979 31.002,53.979 ZM31.002,10.659 C19.779,10.659 10.649,19.778 10.649,30.986 C10.649,42.195 19.779,51.314 31.002,51.314 C42.224,51.314 51.354,42.195 51.354,30.986 C51.354,19.778 42.224,10.659 31.002,10.659 ZM24.802,21.191 L41.788,30.986 L24.802,40.781 L24.802,21.191 ZM27.471,36.163 L36.450,30.986 L27.471,25.810 L27.471,36.163 Z">
+                                            </path>
                                         </svg>
                                     </div>
                                 </div>
@@ -612,32 +616,44 @@
                         <div class="relative tns-controls-style-1">
                             <div class="project-tns-slider project-tns-slider--product flex">
                 
-                                <div class="">
+                                <div class="basis-100 shrink-0">
                                     <div class="square-image">
-                                        <img class="p-xs" src="assets/img/products/3-big.jpg" alt="" width="70" height="48">
+                                        <div class="square-image__content flex justify-center">
+                                            <div class="js-img-zoom full-height full-width">
+                                                <img class="p-xs square-image__full-image" src="assets/img/products/3-big.jpg" alt="alt" width="282"
+                                                height="382">
+                                            </div>
+                                        </div>
+                
                                     </div>
                                 </div>
-                        
-                                <div class="">
+                
+                                <div class="basis-100 shrink-0">
                                     <div class="square-image">
                                         <div class="square-image__content flex align-center">
                                             <div class="videoWrapper grow-1">
-                                                <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/e864ac576a7443909f353c6230bb14b8/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                                <iframe title="A 3D model" width="640" height="480"
+                                                    src="https://sketchfab.com/models/e864ac576a7443909f353c6230bb14b8/embed"
+                                                    frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true"
+                                                    webkitallowfullscreen="true"></iframe>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                        
-                                <div class="">
+                
+                                <div class="basis-100 shrink-0">
                                     <div class="square-image">
                                         <div class="square-image__content flex align-center">
                                             <div class="videoWrapper grow-1">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/9XJE-2KNH-Y" frameborder="0" autoplay="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/9XJE-2KNH-Y"
+                                                    frameborder="0" autoplay="1"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen=""></iframe>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                        
+                
                             </div>
                         </div>
                     </div>
@@ -6629,7 +6645,7 @@
         </div>
         
         <div class="project-tns-slider-wrapper relative pt-default">
-            <div class="project-tns-slider flex">
+            <div class="project-tns-slider flex">">
         
                 <div class="project-tns-slider__item">
                     <div>

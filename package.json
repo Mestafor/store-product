@@ -112,6 +112,7 @@
   },
   "dependencies": {
     "body-scroll-lock": "^2.6.4",
+    "js-image-zoom": "^0.7.0",
     "tiny-slider": "2.9.2",
     "whatwg-fetch": "^3.0.0"
   }

@@ -160,7 +160,7 @@
             top: 50%;
             background-color: transparent;
             color: var(--main-color);
-            width: 25px;
+            width: 28px;
 
             @media(pointer: fine) {
                 &:hover {
@@ -179,4 +179,8 @@
             transform: translate(100%, -50%);
         }
     }
+}
+
+.js-image-zoom__zoomed-image {
+    z-index: 2;
 }

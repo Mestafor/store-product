@@ -1,6 +1,7 @@
 # Running
-1. npm i
-2. npm start
+1. `npm i`
+2. `npm run client:prod`
+3. `npm start`
 
 
 ## Possible solutions

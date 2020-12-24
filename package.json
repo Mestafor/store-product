@@ -61,7 +61,7 @@
     "client:prod:html": "gulp html --gulpfile ./config/gulp/client.gulpfile.js",
     "client:dev:html": "gulp html:watch --gulpfile ./config/gulp/client.gulpfile.js",
     "client:dev": "concurrently \"npm run client:dev:js\" \"npm run client:dev:sass\" \"npm run client:dev:html\"",
-    "client:prod": "NODE_ENV=production concurrently \"npm run client:prod:js\" \"npm run client:prod:sass\" \"npm run client:prod:html\"",
+    "client:prod": "concurrently \"npm run client:prod:js\" \"npm run client:prod:sass\" \"npm run client:prod:html\"",
     "production": "concurrently \"npm run client:prod\"",
     "livereload": "livereload '../css' -e 'css' -w 1000 -d",
     "dev": "webpack-dashboard -- webpack --watch --mode development --progress --config ./config/webpack/client.webpack.config.js",

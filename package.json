@@ -92,7 +92,7 @@
     "gulp-sourcemaps": "2.6.4",
     "jest": "24.5.0",
     "lite-server": "^2.5.4",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "plumber": "0.4.8",
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.5.0",
